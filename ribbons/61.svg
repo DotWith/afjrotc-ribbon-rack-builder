@@ -1,18 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="34.925014mm"
-   height="9.5250187mm"
-   viewBox="0 0 34.925014 9.5250187"
+   width="29.368746mm"
+   height="8.2020864mm"
+   viewBox="0 0 29.368745 8.2020865"
    version="1.1"
    id="svg1179"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="61.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs1173" />
   <sodipodi:namedview
@@ -23,16 +25,19 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="6.6856042"
-     inkscape:cx="132.1871"
-     inkscape:cy="82.419354"
+     inkscape:cx="59.68047"
+     inkscape:cy="8.3014187"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1018"
-     inkscape:window-x="1358"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050" />
   <metadata
      id="metadata1176">
     <rdf:RDF>
@@ -41,7 +46,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -51,40 +55,42 @@
      id="layer1"
      transform="translate(195.78787,-510.95628)">
     <rect
-       style="opacity:1;fill:#131313;fill-opacity:1;stroke:none;stroke-width:0.04553556;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#131313;fill-opacity:1;stroke:none;stroke-width:0.0455355;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4408"
-       width="11.641666"
-       height="9.5249996"
+       width="9.7895784"
+       height="8.2020664"
        x="-195.78787"
        y="510.9563" />
     <rect
-       style="opacity:1;fill:#ba0c2f;fill-opacity:1;stroke:none;stroke-width:0.04553556;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ba0c2f;fill-opacity:1;stroke:none;stroke-width:0.0455355;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect5008"
-       width="11.641666"
-       height="9.5249996"
-       x="-184.14619"
+       width="9.7895784"
+       height="8.2020664"
+       x="-185.99829"
        y="510.9563" />
     <rect
        y="510.9563"
-       x="-172.50453"
-       height="9.5249996"
-       width="11.641666"
+       x="-176.20871"
+       height="8.2020664"
+       width="9.7895784"
        id="rect5010"
-       style="opacity:1;fill:#131313;fill-opacity:1;stroke:none;stroke-width:0.04553556;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="opacity:1;fill:#131313;fill-opacity:1;stroke:none;stroke-width:0.0455355;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <g
-       transform="translate(-266.34701,366.6674)"
+       transform="matrix(0.8409087,0,0,0.86110939,-255.12167,386.70777)"
        id="g6508-12"
-       inkscape:transform-center-x="4.4707746"
-       inkscape:transform-center-y="16.179946">
+       inkscape:transform-center-x="3.7595182"
+       inkscape:transform-center-y="13.932703"
+       style="stroke-width:1.17516">
       <g
          id="g5723-38"
-         transform="matrix(0.95454547,0,0,1,-1.2051436,-26.735616)">
+         transform="matrix(0.95454547,0,0,1,-1.2051436,-26.735616)"
+         style="stroke-width:1.17516">
         <rect
            inkscape:tile-h="0.31749999"
            inkscape:tile-w="34.924998"
            inkscape:tile-cy="27.211864"
            inkscape:tile-cx="22.916539"
-           style="fill:#000000;fill-opacity:0.18039216;stroke:none;stroke-width:0.85634881"
+           style="fill:#000000;fill-opacity:0.180392;stroke:none;stroke-width:1.00635"
            width="34.924999"
            height="0.3175"
            x="76.013191"
@@ -100,7 +106,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5682-38"
            transform="translate(0,1.2699999)"
@@ -109,7 +116,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5684-91"
            transform="translate(0,1.9049999)"
@@ -118,7 +126,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5686-45"
            transform="translate(0,2.5399999)"
@@ -127,7 +136,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5688-69"
            transform="translate(0,3.1749999)"
@@ -136,7 +146,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5690-28"
            transform="translate(0,3.8099998)"
@@ -145,7 +156,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5692-691"
            transform="translate(0,4.4449998)"
@@ -154,7 +166,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5694-72"
            transform="translate(0,5.0799998)"
@@ -163,7 +176,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5696-67"
            transform="translate(0,5.7149997)"
@@ -172,7 +186,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5698-33"
            transform="translate(0,6.3499997)"
@@ -181,7 +196,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5700-855"
            transform="translate(0,6.9849997)"
@@ -190,7 +206,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5702-68"
            transform="translate(0,7.6199997)"
@@ -199,7 +216,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5704-236"
            transform="translate(0,8.2549996)"
@@ -208,7 +226,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use5706-61"
            transform="translate(0,8.8899996)"
@@ -217,11 +236,13 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
       </g>
       <g
          id="g6302-93"
-         transform="translate(1.7940933)">
+         transform="translate(1.7940933)"
+         style="stroke-width:1.17516">
         <rect
            inkscape:tile-y0="-6.0546871e-007"
            inkscape:tile-x0="-1.7940905"
@@ -234,7 +255,7 @@
            height="0.3175"
            width="0.26458332"
            id="rect6165-856"
-           style="opacity:1;fill:#001215;fill-opacity:0.19607843;stroke:none;stroke-width:0.0254;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+           style="opacity:1;fill:#001215;fill-opacity:0.196078;stroke:none;stroke-width:0.029849;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
         <use
            id="use6169-64"
            transform="translate(0,0.63499997)"
@@ -243,7 +264,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6171-840"
            transform="translate(0,1.2699999)"
@@ -252,7 +274,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6173-00"
            transform="translate(0,1.9049999)"
@@ -261,7 +284,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6175-04"
            transform="translate(0,2.5399999)"
@@ -270,7 +294,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6177-02"
            transform="translate(0,3.1749999)"
@@ -279,7 +304,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6179-332"
            transform="translate(0,3.8099998)"
@@ -288,7 +314,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6181-04"
            transform="translate(0,4.4449998)"
@@ -297,7 +324,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6183-69"
            transform="translate(0,5.0799998)"
@@ -306,7 +334,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6185-39"
            transform="translate(0,5.7149997)"
@@ -315,7 +344,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6187-255"
            transform="translate(0,6.3499997)"
@@ -324,7 +354,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6189-99"
            transform="translate(0,6.9849997)"
@@ -333,7 +364,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6191-126"
            transform="translate(0,7.6199997)"
@@ -342,7 +374,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6193-408"
            transform="translate(0,8.2549996)"
@@ -351,7 +384,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6195-72"
            transform="translate(0,8.8899996)"
@@ -360,7 +394,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6197-45"
            transform="translate(0.26458331,0.31749999)"
@@ -369,7 +404,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6199-663"
            transform="translate(0.26458331,0.95249996)"
@@ -378,7 +414,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6201-107"
            transform="translate(0.26458331,1.5874999)"
@@ -387,7 +424,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6203-81"
            transform="translate(0.26458331,2.2224999)"
@@ -396,7 +434,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6205-55"
            transform="translate(0.26458331,2.8574999)"
@@ -405,7 +444,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6207-08"
            transform="translate(0.26458331,3.4924998)"
@@ -414,7 +454,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6209-52"
            transform="translate(0.26458331,4.1274998)"
@@ -423,7 +464,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6211-97"
            transform="translate(0.26458331,4.7624998)"
@@ -432,7 +474,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6213-863"
            transform="translate(0.26458331,5.3974998)"
@@ -441,7 +484,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6215-13"
            transform="translate(0.26458331,6.0324997)"
@@ -450,7 +494,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6217-92"
            transform="translate(0.26458331,6.6674997)"
@@ -459,7 +504,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6219-073"
            transform="translate(0.26458331,7.3024997)"
@@ -468,7 +514,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6221-82"
            transform="translate(0.26458331,7.9374996)"
@@ -477,7 +524,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6223-232"
            transform="translate(0.26458331,8.5724996)"
@@ -486,7 +534,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            id="use6225-94"
            transform="translate(0.26458331,9.2074996)"
@@ -495,7 +544,8 @@
            y="0"
            x="0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -504,7 +554,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -513,7 +564,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -522,7 +574,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -531,7 +584,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -540,7 +594,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -549,7 +604,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -558,7 +614,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -567,7 +624,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -576,7 +634,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -585,7 +644,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -594,7 +654,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -603,7 +664,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -612,7 +674,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -621,7 +684,8 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -630,13 +694,15 @@
            xlink:href="#rect6165-856"
            inkscape:tiled-clone-of="#rect6165-856"
            y="0"
-           x="0" />
+           x="0"
+           style="stroke-width:1.17516" />
       </g>
       <g
          transform="translate(35.925343)"
-         id="g6394-205">
+         id="g6394-205"
+         style="stroke-width:1.17516">
         <rect
-           style="opacity:1;fill:#001215;fill-opacity:0.19607843;stroke:none;stroke-width:0.0254;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="opacity:1;fill:#001215;fill-opacity:0.196078;stroke:none;stroke-width:0.029849;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="rect6304-31"
            width="0.26458332"
            height="0.3175"
@@ -656,7 +722,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,0.63499997)"
-           id="use6306-84" />
+           id="use6306-84"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -665,7 +732,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,1.2699999)"
-           id="use6308-36" />
+           id="use6308-36"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -674,7 +742,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,1.9049999)"
-           id="use6310-41" />
+           id="use6310-41"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -683,7 +752,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,2.5399999)"
-           id="use6312-11" />
+           id="use6312-11"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -692,7 +762,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,3.1749999)"
-           id="use6314-40" />
+           id="use6314-40"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -701,7 +772,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,3.8099998)"
-           id="use6316-18" />
+           id="use6316-18"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -710,7 +782,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,4.4449998)"
-           id="use6318-65" />
+           id="use6318-65"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -719,7 +792,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,5.0799998)"
-           id="use6320-86" />
+           id="use6320-86"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -728,7 +802,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,5.7149997)"
-           id="use6322-82" />
+           id="use6322-82"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -737,7 +812,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,6.3499997)"
-           id="use6324-04" />
+           id="use6324-04"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -746,7 +822,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,6.9849997)"
-           id="use6326-884" />
+           id="use6326-884"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -755,7 +832,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,7.6199997)"
-           id="use6328-62" />
+           id="use6328-62"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -764,7 +842,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,8.2549996)"
-           id="use6330-68" />
+           id="use6330-68"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -773,7 +852,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0,8.8899996)"
-           id="use6332-350" />
+           id="use6332-350"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -782,7 +862,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,0.31749999)"
-           id="use6334-81" />
+           id="use6334-81"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -791,7 +872,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,0.95249996)"
-           id="use6336-55" />
+           id="use6336-55"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -800,7 +882,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,1.5874999)"
-           id="use6338-783" />
+           id="use6338-783"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -809,7 +892,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,2.2224999)"
-           id="use6340-969" />
+           id="use6340-969"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -818,7 +902,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,2.8574999)"
-           id="use6342-031" />
+           id="use6342-031"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -827,7 +912,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,3.4924998)"
-           id="use6344-62" />
+           id="use6344-62"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -836,7 +922,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,4.1274998)"
-           id="use6346-49" />
+           id="use6346-49"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -845,7 +932,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,4.7624998)"
-           id="use6348-46" />
+           id="use6348-46"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -854,7 +942,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,5.3974998)"
-           id="use6350-97" />
+           id="use6350-97"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -863,7 +952,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,6.0324997)"
-           id="use6352-71" />
+           id="use6352-71"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -872,7 +962,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,6.6674997)"
-           id="use6354-93" />
+           id="use6354-93"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -881,7 +972,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,7.3024997)"
-           id="use6356-89" />
+           id="use6356-89"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -890,7 +982,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,7.9374996)"
-           id="use6358-58" />
+           id="use6358-58"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -899,7 +992,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,8.5724996)"
-           id="use6360-93" />
+           id="use6360-93"
+           style="stroke-width:1.17516" />
         <use
            height="100%"
            width="100%"
@@ -908,7 +1002,8 @@
            inkscape:tiled-clone-of="#rect6165-856"
            xlink:href="#rect6165-856"
            transform="translate(0.26458331,9.2074996)"
-           id="use6362-27" />
+           id="use6362-27"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -917,7 +1012,8 @@
            transform="translate(0.52916718)"
            id="use6364-28"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -926,7 +1022,8 @@
            transform="translate(0.52916718,0.63499993)"
            id="use6366-50"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -935,7 +1032,8 @@
            transform="translate(0.52916718,1.2699999)"
            id="use6368-15"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -944,7 +1042,8 @@
            transform="translate(0.52916718,1.9049999)"
            id="use6370-86"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -953,7 +1052,8 @@
            transform="translate(0.52916718,2.5399999)"
            id="use6372-1"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -962,7 +1062,8 @@
            transform="translate(0.52916718,3.1749998)"
            id="use6374-55"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -971,7 +1072,8 @@
            transform="translate(0.52916718,3.8099998)"
            id="use6376-0"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -980,7 +1082,8 @@
            transform="translate(0.52916718,4.4449998)"
            id="use6378-68"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -989,7 +1092,8 @@
            transform="translate(0.52916718,5.0799997)"
            id="use6380-85"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -998,7 +1102,8 @@
            transform="translate(0.52916718,5.7149997)"
            id="use6382-70"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -1007,7 +1112,8 @@
            transform="translate(0.52916718,6.3499997)"
            id="use6384-380"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -1016,7 +1122,8 @@
            transform="translate(0.52916718,6.9849997)"
            id="use6386-27"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -1025,7 +1132,8 @@
            transform="translate(0.52916718,7.6199996)"
            id="use6388-89"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -1034,7 +1142,8 @@
            transform="translate(0.52916718,8.2549996)"
            id="use6390-67"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
         <use
            x="0"
            y="0"
@@ -1043,7 +1152,8 @@
            transform="translate(0.52916718,8.8899996)"
            id="use6392-56"
            width="100%"
-           height="100%" />
+           height="100%"
+           style="stroke-width:1.17516" />
       </g>
     </g>
   </g>
