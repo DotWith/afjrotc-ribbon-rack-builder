@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="111" height="31">
+<title id="title1">AFJROTC Drill Team Ribbon</title>
+<g> <!-- Solid background color -->
+   <rect fill="#c5e86c" width="111" height="31"/>
+</g>
+<g> <!-- Vertical stripes on the ribbon -->
+   <rect fill="#43b02a" x="12" y="0" width="87" height="31"/> <!-- Light Green stripe -->
+   <rect fill="#007a33" x="21.5" y="0" width="68" height="31"/> <!-- Mid Green stripe -->
+   <rect fill="#284734" x="30.5" y="0" width="50" height="31"/> <!-- Dark Green stripe -->
+   <rect fill="#ffffff" x="40" y="0" width="31" height="31"/> <!-- White stripe -->
+</g>
+<g><!-- This creates the ribbon knit effect -->
+	<path stroke="#000000" stroke-width="105" stroke-dasharray="1" opacity=".25" d="m55.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m1.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m109.5,0v31"/>
+</g>
+</svg>

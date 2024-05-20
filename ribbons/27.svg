@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="111" height="31">
+<title id="title1">AFJROTC Distinguished Unit Award</title>
+<g> <!-- Solid background color -->
+    <rect fill="#ffffff" width="111" height="31"/> <!-- White background -->
+</g>
+<g> <!-- Vertical stripes on the ribbon -->
+   <path stroke="#0072ce" stroke-width="39" d="M 55.5,0 V 31" /> <!-- Blue line -->
+   <path stroke="#f7d117" stroke-width="13" d="M 55.5,0 V 31" /> <!-- Gold center line -->
+   <path stroke="#0072ce" stroke-width="39" d="M 1650,0 V 31"/> <!-- Blue line -->
+   <path stroke="#f7d117" stroke-width="13" d="M 1650,0 V 31"/> <!-- Gold center line -->
+</g>
+<g><!-- This creates the ribbon knit effect -->
+	<path stroke="#000000" stroke-width="105" stroke-dasharray="1" opacity=".25" d="m55.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m1.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m109.5,0v31"/>
+</g>
+</svg>

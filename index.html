@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFJROTC Ribbon Rack Builder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .ribbon-selection {
+      margin-bottom: 20px;
+    }
+
+    .ribbon-checkbox {
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .ribbon-checkbox img {
+      width: 100px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .rack {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .rack img {
+      width: 100px;
+      height: 30px;
+      margin: 2px;
+    }
+
+    .rack .row {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .rack .row img {
+      margin: 0 5px;
+    }
+
+    .button-group {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>AFJROTC Ribbon Rack Builder</h1>
+    <div class="ribbon-selection" id="ribbonSelection">
+      <!-- Ribbons will be populated here -->
+    </div>
+    <h2>Your Ribbon Rack</h2>
+    <div class="rack" id="rack">
+      <!-- Ribbons will appear here -->
+    </div>
+    <div class="button-group">
+      <button class="save-button" onclick="saveRackImage()">Save Rack as Image</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    let selectedRibbons = [];
+
+    fetch('ribbons.json')
+      .then(response => response.json())
+      .then(data => {
+        const ribbonSelection = document.getElementById('ribbonSelection');
+        data.forEach(ribbon => {
+          const label = document.createElement('label');
+          label.classList.add('ribbon-checkbox');
+
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.dataset.ribbon = ribbon.id;
+
+          const img = document.createElement('img');
+          img.src = `ribbons/${ribbon.id}.svg`;
+          img.alt = ribbon.name;
+
+          const text = document.createTextNode(ribbon.id + ". " + ribbon.name);
+
+          // Add Oaks probably up to 0..9
+          label.appendChild(checkbox);
+          label.appendChild(img);
+          label.appendChild(text);
+
+          ribbonSelection.appendChild(label);
+        });
+
+        // Update selected ribbons when checkboxes are changed
+        const ribbonCheckboxes = document.querySelectorAll('input[data-ribbon]');
+        ribbonCheckboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', updateSelectedRibbons);
+        });
+      });
+
+    function updateSelectedRibbons() {
+      selectedRibbons = Array.from(document.querySelectorAll('input[data-ribbon]'))
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => parseInt(checkbox.dataset.ribbon));
+
+      updateRack();
+    }
+
+    function updateRack() {
+      const rack = document.getElementById('rack');
+      rack.innerHTML = '';
+
+      // Define the maximum number of ribbons per row
+      const maxRibbonsPerRow = 3;
+
+      // Initialize an array to hold the ribbons for the current row
+      let currentRowRibbons = [];
+
+      // Sort the selected ribbons using the sortRibbons function
+      const sortedRibbons = sortRibbons(selectedRibbons.map(ribbonId => {
+        return ribbonId;
+      }));
+
+      // Loop through the sorted ribbons
+      sortedRibbons.forEach((row, rowIndex) => {
+        // Create a row element
+        const rowElement = document.createElement('div');
+        rowElement.classList.add('row');
+
+        // Loop through the ribbons in the current row
+        row.forEach(ribbon => {
+          // Create an image element for each ribbon
+          const ribbonElement = document.createElement('img');
+          ribbonElement.src = `ribbons/${ribbon}.svg`; // Assuming ribbon id corresponds to the image filename
+          rowElement.appendChild(ribbonElement);
+        });
+
+        // Append the row element to the rack
+        rack.appendChild(rowElement);
+      });
+    }
+
+    function sortRibbons(ribbons) {
+      ribbons.sort((a, b) => a - b);
+
+      const evenRows = ribbons.length % 3; // >1 = unven, 0 = even
+
+      const rows = [];
+      const ribbonsPerRow = 3;
+      const numRows = Math.ceil(ribbons.length / ribbonsPerRow);
+
+      for (let i = 0; i < numRows; i++) {
+        // if it's uneven then 1 or 2 go on the top
+        // and the reset of the ribbons follow the 3 per row princlpe
+        const row = [];
+
+        if (evenRows && i === 0) {
+          // If it's an odd count of ribbons and it's the first row,
+          // add 1 or 2 ribbons to the top row
+          const ribbonsToAdd = Math.min(evenRows, ribbons.length);
+          console.log(ribbonsToAdd);
+          for (let j = 0; j < ribbonsToAdd; j++) {
+            row.push(ribbons.shift());
+          }
+        } else {
+          // Add ribbons following the 3 per row principle
+          for (let j = 0; j < ribbonsPerRow && ribbons.length > 0; j++) {
+            row.push(ribbons.shift());
+          }
+        }
+
+        rows.push(row);
+      }
+
+      return rows;
+    }
+
+    function saveRackImage() {
+      html2canvas(document.getElementById('rack'), { backgroundColor: null }).then(canvas => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'ribbon_rack.png';
+        link.click();
+      });
+    }
+  </script>
+</body>
+
+</html>

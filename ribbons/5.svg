@@ -1,0 +1,24 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="111" height="31">
+<title id="title1">AFJROTC Community Service with Excellence Ribbon</title>
+<g> <!-- Solid background color -->
+	<rect fill="#ffffff" width="111" height="31"/>
+</g>
+<g> <!-- Vertical stripes on the ribbon -->
+	<rect fill="#d80403" x="0" y="0" width="37" height="31"/> <!-- Red stripe -->
+    <rect fill="#dca22c" x="0" y="0" width="5" height="31"/> <!-- Red's Left stripe -->
+    <rect fill="#dca22c" x="32" y="0" width="5" height="31"/> <!-- Red's Right stripe -->
+
+    <rect fill="#052a94" x="74" y="0" width="37" height="31"/> <!-- Blue stripe -->
+    <rect fill="#dca22c" x="74" y="0" width="5" height="31"/> <!-- Blue's Left stripe -->
+    <rect fill="#dca22c" x="106" y="0" width="5" height="31"/> <!-- Blue's Right stripe -->
+</g>
+<g><!-- This creates the ribbon knit effect -->
+	<path stroke="#000000" stroke-width="37" stroke-dasharray="1" opacity=".25" d="m55.5,0v31"/>
+	<path stroke="#000000" stroke-width="27" stroke-dasharray="1" opacity=".25" d="m18.5,0v31"/>
+	<path stroke="#000000" stroke-width="27" stroke-dasharray="1" opacity=".25" d="m92.5,0v31"/>
+	<path stroke="#000000" stroke-width="5" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m2.5,0v31"/>
+	<path stroke="#000000" stroke-width="5" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m108.5,0v31"/>
+	<path stroke="#000000" stroke-width="5" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m34.5,0v31"/>
+	<path stroke="#000000" stroke-width="5" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m76.5,0v31"/>
+</g>
+</svg>

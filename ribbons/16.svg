@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="111" height="31">
+<title id="title1">AFJROTC Scottish Rite Southern Jurisdiction Award</title>
+<g> <!-- Solid background color -->
+    <rect fill="#5f259f" width="111" height="31"/> <!-- Purple background -->
+</g>
+<g><!-- This creates the ribbon knit effect -->
+	<path stroke="#000000" stroke-width="105" stroke-dasharray="1" opacity=".25" d="m55.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m1.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m109.5,0v31"/>
+</g>
+<g transform="matrix(0.70266136,0,0,0.70266136,16.502294,-2.4178647)"><!-- This creates the star -->
+	<path d="m 55.5,8.5 4.6,13.4 H 73.5 L 62.7,29.1 67.3,42.5 55.5,35.3 43.7,42.5 48.3,29.1 37.5,21.9 h 13.4 z" fill="#ffffff" />
+</g>
+</svg>

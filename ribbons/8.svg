@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="111" height="31">
+<title id="title1">AFJROTC Daughters of the American Revolution Award</title>
+<g> <!-- Solid background color -->
+    <rect fill="#365498" width="111" height="31"/> <!-- Blue background -->
+</g>
+<g> <!-- Vertical stripes on the ribbon -->
+    <rect fill="#ffffff" x="9" y="0" width="25" height="31"/> <!-- Left stripe -->
+    <rect fill="#ffffff" x="77" y="0" width="25" height="31"/> <!-- Right stripe -->
+    <rect fill="#e01714" x="34" y="0" width="43" height="31"/> <!-- Red stripe -->
+</g>
+<g><!-- This creates the ribbon knit effect -->
+	<path stroke="#000000" stroke-width="105" stroke-dasharray="1" opacity=".25" d="m55.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m1.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m109.5,0v31"/>
+</g>
+</svg>

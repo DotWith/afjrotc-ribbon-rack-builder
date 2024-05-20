@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="111" height="31">
+<title id="title1">AFJROTC Robotics Ribbon</title>
+<g> <!-- Solid background color -->
+    <rect fill="#8b8c90" width="111" height="31"/> <!-- Light gray background -->
+</g>
+<g> <!-- Vertical stripes on the ribbon -->
+    <rect fill="#0183bf" x="15" y="0" width="8" height="31"/> <!-- Blue stripe on the left -->
+    <rect fill="#ffffff" x="54" y="0" width="10" height="31"/> <!-- White stripe -->
+    <rect fill="#0183bf" x="93" y="0" width="8" height="31"/> <!-- Blue stripe on the right -->
+</g>
+<g><!-- This creates the ribbon knit effect -->
+	<path stroke="#000000" stroke-width="105" stroke-dasharray="1" opacity=".25" d="m55.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m1.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m109.5,0v31"/>
+</g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="111" height="31">
+<title id="title1">AFJROTC Military Order of World Wars (MOWW) Award</title>
+<g> <!-- Solid background color -->
+    <rect fill="#9b1723" width="111" height="31"/> <!-- Red background -->
+</g>
+<g> <!-- Vertical stripes on the ribbon -->
+    <rect fill="#efc45d" x="12" y="0" width="7" height="31"/> <!-- #1 stripe -->
+    <rect fill="#efc45d" x="28.2" y="0" width="7" height="31"/> <!-- #2 stripe -->
+    <rect fill="#efc45d" x="44.4" y="0" width="7" height="31"/> <!-- #3 stripe -->
+    <rect fill="#efc45d" x="60.6" y="0" width="7" height="31"/> <!-- #4 stripe -->
+    <rect fill="#efc45d" x="76.8" y="0" width="7" height="31"/> <!-- #5 stripe -->
+    <rect fill="#efc45d" x="93" y="0" width="7" height="31"/> <!-- #6 stripe -->
+</g>
+<g><!-- This creates the ribbon knit effect -->
+	<path stroke="#000000" stroke-width="105" stroke-dasharray="1" opacity=".25" d="m55.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m1.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m109.5,0v31"/>
+</g>
+</svg>

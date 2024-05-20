@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="111" height="31">
+<title id="title1">AFJROTC Daedalian Award</title>
+<g> <!-- Solid background color -->
+    <rect fill="#d3a50c" width="111" height="31"/> <!-- Yellow background -->
+</g>
+<g> <!-- Vertical stripes on the ribbon -->
+    <rect fill="#1c390b" x="8" y="0" width="7" height="31"/> <!-- #1 stripe -->
+    <rect fill="#1c390b" x="21" y="0" width="7" height="31"/> <!-- #2 stripe -->
+
+    <rect fill="#1c390b" x="95" y="0" width="7" height="31"/> <!-- #3 stripe -->
+    <rect fill="#1c390b" x="82" y="0" width="7" height="31"/> <!-- #4 stripe -->
+</g>
+<g><!-- This creates the ribbon knit effect -->
+	<path stroke="#000000" stroke-width="105" stroke-dasharray="1" opacity=".25" d="m55.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m1.5,0v31"/>
+	<path stroke="#000000" stroke-width="3" stroke-dasharray="1" stroke-dashoffset="1" opacity=".25" d="m109.5,0v31"/>
+</g>
+</svg>
