@@ -6,8 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AFJROTC Ribbon Rack Builder</title>
   <style>
+    @font-face {
+      font-family: FFDINWeb;
+      src: url('DIN.ttf');
+    }
+
+    @font-face {
+      font-family: Stratum;
+      src: url('stratum-no1-6.ttf');
+    }
+
+    @font-face {
+      font-family: StratumBold;
+      src: url('stratum-no1-2.ttf');
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: FFDINWeb, Arial, sans-serif;
+      font-weight: 400;
+      letter-spacing: normal;
+      color: #0e172d;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-family: Stratum, Arial, sans-serif;
+      text-transform: uppercase;
+      font-style: normal;
+      text-align: center;
     }
 
     .container {
@@ -21,15 +47,21 @@
     }
 
     .ribbon-checkbox {
-      margin-right: 10px;
+      margin-right: 24px;
       display: flex;
       align-items: center;
+    }
+
+    .ribbon-checkbox input {
+      margin-right: 24px;
+      height: 26px;
+      accent-color: rgb(213, 210, 204);
     }
 
     .ribbon-checkbox img {
       width: 100px;
       height: 30px;
-      margin-right: 10px;
+      margin-right: 24px;
     }
 
     .rack {
@@ -57,7 +89,28 @@
     .button-group {
       margin-top: 20px;
       display: flex;
+      justify-content: center;
+      align-items: center;
+      display: flex;
       gap: 10px;
+    }
+
+    .save-button {
+      font-family: StratumBold;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 20px;
+      letter-spacing: 2px;
+      text-align: center;
+      height: 40px;
+      text-transform: uppercase;
+      border: 0px solid #ffffff;
+      border-top-color: rgb(255, 255, 255);
+      border-right-color: rgb(255, 255, 255);
+      border-bottom-color: rgb(255, 255, 255);
+      border-left-color: rgb(255, 255, 255);
+      border-radius: 0px;
     }
   </style>
 </head>
@@ -65,17 +118,21 @@
 <body>
 
   <div class="container">
-    <h1>AFJROTC Ribbon Rack Builder</h1>
+    <div>
+      <h1>AFJROTC Ribbon Rack Builder</h1>
+      <div style="text-align: center; margin-bottom: 30px;">Check the box next to each ribbon you would like to have
+        sorted.</div>
+    </div>
     <div class="ribbon-selection" id="ribbonSelection">
       <!-- Ribbons will be populated here -->
     </div>
-    <h2>Your Ribbon Rack</h2>
-    <div class="rack" id="rack">
-      <!-- Ribbons will appear here -->
-    </div>
-    <div class="button-group">
-      <button class="save-button" onclick="saveRackImage()">Save Rack as Image</button>
-    </div>
+    <h1>Your Ribbon Rack</h2>
+      <div class="rack" id="rack">
+        <!-- Ribbons will appear here -->
+      </div>
+      <div class="button-group">
+        <button class="save-button" onclick="saveRackImage()">Save Rack as Image</button>
+      </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
