@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "name": "Cadet Airman Basic"
+    },
+    {
+        "id": 1,
+        "name": "Cadet Airman"
+    },
+    {
+        "id": 2,
+        "name": "Cadet Airman First Class"
+    },
+    {
+        "id": 3,
+        "name": "Cadet Senior Airman"
+    },
+    {
+        "id": 4,
+        "name": "Cadet Staff Sergeant"
+    },
+    {
+        "id": 5,
+        "name": "Cadet Technical Sergeant"
+    },
+    {
+        "id": 6,
+        "name": "Cadet Master Sergeant"
+    },
+    {
+        "id": 7,
+        "name": "Cadet Senior Master Sergeant"
+    },
+    {
+        "id": 8,
+        "name": "Cadet Chief Master Sergeant"
+    },
+    {
+        "id": 9,
+        "name": "Cadet Second Lieutenant"
+    },
+    {
+        "id": 10,
+        "name": "Cadet First Lieutenant"
+    },
+    {
+        "id": 11,
+        "name": "Cadet Captain"
+    },
+    {
+        "id": 12,
+        "name": "Cadet Major"
+    },
+    {
+        "id": 13,
+        "name": "Cadet Lieutenant Colonel"
+    },
+    {
+        "id": 14,
+        "name": "Cadet Colonel"
+    }
+]

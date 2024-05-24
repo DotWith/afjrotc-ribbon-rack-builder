@@ -36,13 +36,29 @@
       text-align: center;
     }
 
+    h2 {
+      font-weight: 500;
+      font-family: Stratum, Arial, sans-serif;
+      text-transform: uppercase;
+      font-style: normal;
+      text-align: center;
+    }
+
+    h3 {
+      font-weight: 200;
+      font-family: Stratum, Arial, sans-serif;
+      text-transform: uppercase;
+      font-style: normal;
+      text-align: center;
+    }
+
     .container {
       max-width: 600px;
       margin: auto;
       padding: 20px;
     }
 
-    .ribbon-selection {
+    .box-selection {
       margin-bottom: 20px;
     }
 
@@ -64,14 +80,56 @@
       margin-right: 24px;
     }
 
+    .rank-radio {
+      margin-right: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .rank-radio input {
+      margin-right: 24px;
+      height: 26px;
+      accent-color: rgb(213, 210, 204);
+    }
+
+    .rank-radio img {
+      width: 60px;
+      height: 60px;
+      margin-right: 24px;
+    }
+    
+    .badge-checkbox {
+      margin-right: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .badge-checkbox input {
+      margin-right: 24px;
+      height: 26px;
+      accent-color: rgb(213, 210, 204);
+    }
+
+    .badge-checkbox img {
+      width: 60px;
+      height: 60px;
+      margin-right: 24px;
+    }
+    
     .rack {
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    .rack img {
+    .rack-ribbon-img {
       width: 100px;
       height: 30px;
+      margin: 2px;
+    }
+
+    .rack-badge-img {
+      width: 60px;
+      height: 60px;
       margin: 2px;
     }
 
@@ -112,6 +170,42 @@
       border-left-color: rgb(255, 255, 255);
       border-radius: 0px;
     }
+
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
   </style>
 </head>
 
@@ -123,21 +217,118 @@
       <div style="text-align: center; margin-bottom: 30px;">Check the box next to each ribbon you would like to have
         sorted.</div>
     </div>
-    <div class="ribbon-selection" id="ribbonSelection">
-      <!-- Ribbons will be populated here -->
+    <!-- Tab links -->
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Ribbons')" id="defaultOpen">Ribbons</button>
+      <button class="tablinks" onclick="openTab(event, 'Badges')">Badges</button>
+      <button class="tablinks" onclick="openTab(event, 'Ranks')">Ranks</button>
     </div>
-    <h1>Your Ribbon Rack</h2>
-      <div class="rack" id="rack">
-        <!-- Ribbons will appear here -->
+
+    <!-- Tab content -->
+    <div id="Ribbons" class="tabcontent">
+      <h3>Ribbons</h3>
+      <div class="box-selection" id="ribbonSelection">
+        <!-- Ribbons will be populated here -->
       </div>
-      <div class="button-group">
-        <button class="save-button" onclick="saveRackImage()">Save Rack as Image</button>
+    </div>
+
+    <div id="Badges" class="tabcontent">
+      <h3>Badges</h3>
+      <div class="box-selection" id="badgeSelection">
+        <!-- Badges will be populated here -->
       </div>
+    </div>
+
+    <div id="Ranks" class="tabcontent">
+      <h3>Ranks</h3>
+      <div class="box-selection" id="rankSelection">
+        <!-- Ranks will be populated here -->
+      </div>
+    </div>
+    <h2>Your Ribbon Rack</h2>
+    <div class="rack" id="rack">
+      <!-- Ribbons will appear here -->
+    </div>
+    <div class="button-group">
+      <button class="save-button" onclick="saveRackImage()">Save Rack as Image</button>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
     let selectedRibbons = [];
+    let selectedRanks = [];
+    let selectedBadges = [];
+
+    fetch('badges.json')
+      .then(response => response.json())
+      .then(data => {
+        const badgeSelection = document.getElementById('badgeSelection');
+        data.forEach(badge => {
+          const label = document.createElement('label');
+          label.classList.add('badge-checkbox');
+
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.dataset.badge = badge.path;
+
+          const img = document.createElement('img');
+          img.src = `badges/${badge.path}`;
+          img.alt = badge.name;
+
+          const text = document.createTextNode(badge.name);
+
+          label.appendChild(checkbox);
+          label.appendChild(img);
+          label.appendChild(text);
+
+          badgeSelection.appendChild(label);
+        });
+        
+        // Update selected badges when checkboxes are changed
+        const badgeCheckboxes = document.querySelectorAll('input[data-badge]');
+        badgeCheckboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', updateSelectedRibbons);
+        });
+      });
+
+    fetch('ranks.json')
+      .then(response => response.json())
+      .then(data => {
+        const rankSelection = document.getElementById('rankSelection');
+        data.forEach(rank => {
+          const label = document.createElement('label');
+          label.classList.add('rank-radio');
+
+          const radio = document.createElement('input');
+          radio.dataset.rank = rank.id;
+          radio.type = 'radio';
+          radio.name = 'rank';
+          radio.value = rank.id;
+          label.appendChild(radio);
+
+          if (rank.id != 0) {
+            const img = document.createElement('img');
+            img.src = `ranks/${rank.id}.svg`;
+            img.alt = rank.name;
+            label.appendChild(img);
+          }
+
+          const text = document.createTextNode(rank.id + ". " + rank.name);
+          label.appendChild(text);
+
+          rankSelection.appendChild(label);
+        });
+
+        // Update selected ranks when radios are changed
+        const ranksRadios = document.querySelectorAll('input[data-rank]');
+        ranksRadios.forEach(radio => {
+          radio.addEventListener('change', updateSelectedRibbons);
+        });
+      });
 
     fetch('ribbons.json')
       .then(response => response.json())
@@ -173,6 +364,14 @@
       });
 
     function updateSelectedRibbons() {
+      selectedBadges = Array.from(document.querySelectorAll('input[data-badge]'))
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.dataset.badge);
+
+      selectedRanks = Array.from(document.querySelectorAll('input[data-rank]'))
+        .filter(radio => radio.checked)
+        .map(radio => parseInt(radio.dataset.rank));
+
       selectedRibbons = Array.from(document.querySelectorAll('input[data-ribbon]'))
         .filter(checkbox => checkbox.checked)
         .map(checkbox => parseInt(checkbox.dataset.ribbon));
@@ -195,6 +394,33 @@
         return ribbonId;
       }));
 
+      const superRow = [];
+
+      selectedRanks.forEach(rank => {
+        if (rank == 0) {
+          return;
+        }
+        
+        const rankElement = document.createElement('img');
+        rankElement.src = `ranks/${rank}.svg`;
+        rankElement.className = 'rack-badge-img';
+
+        superRow.push(rankElement);
+      });
+      
+      selectedBadges.forEach(badge => {
+        const badgeElement = document.createElement('img');
+        badgeElement.src = `badges/${badge}`;
+        badgeElement.className = 'rack-badge-img';
+
+        superRow.push(badgeElement);
+      });
+
+      // Loop through the ribbons in the current row
+      superRow.forEach(child => {
+        rack.appendChild(child);
+      });
+
       // Loop through the sorted ribbons
       sortedRibbons.forEach((row, rowIndex) => {
         // Create a row element
@@ -206,6 +432,7 @@
           // Create an image element for each ribbon
           const ribbonElement = document.createElement('img');
           ribbonElement.src = `ribbons/${ribbon}.svg`; // Assuming ribbon id corresponds to the image filename
+          ribbonElement.className = 'rack-ribbon-img';
           rowElement.appendChild(ribbonElement);
         });
 
@@ -257,6 +484,27 @@
         link.click();
       });
     }
+
+    function openTab(evt, tabName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    } 
   </script>
 </body>
 
