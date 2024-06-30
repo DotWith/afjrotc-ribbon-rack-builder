@@ -1,0 +1,232 @@
+@font-face {
+    font-family: FFDINWeb;
+    src: url('DIN.ttf');
+}
+
+@font-face {
+    font-family: Stratum;
+    src: url('stratum-no1-6.ttf');
+}
+
+@font-face {
+    font-family: StratumBold;
+    src: url('stratum-no1-2.ttf');
+}
+
+body {
+    font-family: FFDINWeb, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: #0e172d;
+}
+
+h1 {
+    font-weight: 700;
+    font-family: Stratum, Arial, sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 500;
+    font-family: Stratum, Arial, sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 200;
+    font-family: Stratum, Arial, sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.box-selection {
+    margin-bottom: 20px;
+}
+
+.ribbon-checkbox {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.ribbon-checkbox input {
+    margin-right: 24px;
+    height: 26px;
+    accent-color: rgb(213, 210, 204);
+}
+
+.ribbon-checkbox-range {
+    margin-left: auto;
+} 
+
+.ribbon-checkbox img {
+    width: 100px;
+    height: 30px;
+    margin-right: 24px;
+}
+
+.rank-radio {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.rank-radio input {
+    margin-right: 24px;
+    height: 26px;
+    accent-color: rgb(213, 210, 204);
+}
+
+.rank-radio img {
+    width: 60px;
+    height: 60px;
+    margin-right: 24px;
+}
+
+.badge-checkbox {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.badge-checkbox input {
+    margin-right: 24px;
+    height: 26px;
+    accent-color: rgb(213, 210, 204);
+}
+
+.badge-checkbox img {
+    width: 60px;
+    height: 60px;
+    margin-right: 24px;
+}
+
+.rack {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ribbon container */
+.rack-ribbon {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* ribbon img */
+.rack-ribbon-img {
+    width: 100px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* ribbon oak container */
+.ribbon-oak {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+
+/* ribbon oak img */
+.ribbon-oak-img {
+    position: static;
+    width: 20px;
+    height: 20px;
+    margin: 0 0px;
+}
+
+.rack-badge-img {
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+    object-fit: contain;
+}
+
+.rack .row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+/* .rack .row img {
+    margin: 0 5px;
+} */
+
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.save-button {
+    font-family: StratumBold;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    height: 40px;
+    text-transform: uppercase;
+    border: 0px solid #ffffff;
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-radius: 0px;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
