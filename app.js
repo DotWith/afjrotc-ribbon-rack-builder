@@ -80,22 +80,11 @@ fetch('ribbons.json')
             const label = document.createElement('label');
             label.classList.add('ribbon-checkbox');
 
-            // const dropdown = document.createElement('select');
-            // dropdown.dataset.ribbon = ribbon.id;
-
-            // const noneOption = document.createElement('option');
-            // noneOption.value = 'none';
-            // noneOption.text = 'None';
-            // dropdown.appendChild(noneOption);
-
-            // for (let i = 0; i < 21; i++) {
-            //     const oakOption = document.createElement('option');
-            //     oakOption.value = i;
-            //     oakOption.text = i + ' Oak';
-            //     dropdown.appendChild(oakOption);
-            // }
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
+            if (ribbon.custom_oaks != null) {
+                checkbox.dataset.custom_oaks = ribbon.custom_oaks;
+            }
             checkbox.dataset.ribbon = ribbon.id;
 
             const img = document.createElement('img');
@@ -108,8 +97,13 @@ fetch('ribbons.json')
             oakNumber.className = 'ribbon-checkbox-range';
             oakNumber.type = 'range';
             oakNumber.value = 0;
-            oakNumber.min = 0;
-            oakNumber.max = 20;
+            if (ribbon.custom_oaks != null) {
+                oakNumber.min = 0;
+                oakNumber.max = ribbon.custom_oaks.length - 1;
+            } else {
+                oakNumber.min = 0;
+                oakNumber.max = 20;
+            }
             oakNumber.dataset.ribbon = ribbon.id; // Store ribbon id for easy reference
 
             label.appendChild(checkbox);
@@ -143,11 +137,14 @@ function updateSelectedRibbons() {
 
     selectedRibbons = Array.from(document.querySelectorAll('input[data-ribbon]'))
         .filter(checkbox => checkbox.checked)
-        .map(checkbox => [
-                parseInt(checkbox.dataset.ribbon),
-                parseInt(document.querySelector(`.ribbon-checkbox-range[data-ribbon="${checkbox.dataset.ribbon}"]`).value)
-            ]
-        );
+        .map(checkbox => {
+            const ribbonId = parseInt(checkbox.dataset.ribbon);
+            const oakNumber = parseInt(document.querySelector(`.ribbon-checkbox-range[data-ribbon="${checkbox.dataset.ribbon}"]`).value);
+            const customOaks = checkbox.dataset.custom_oaks ? checkbox.dataset.custom_oaks.split(',').map(oak => oak.trim()) : [];
+            console.log(customOaks);
+
+            return [ribbonId, oakNumber, customOaks];
+        });
 
     updateRack();
 }
@@ -208,22 +205,31 @@ function updateRack() {
             const oakContainer = document.createElement('div');
             oakContainer.className = 'ribbon-oak';
 
-            if (ribbon[1] > 0) {
-                const numberOfSilverOaks = Math.floor(ribbon[1] / 5);
-                const remainderBronzeOaks = ribbon[1] % 5;
+            if (Array.isArray(ribbon[2]) && ribbon[2].length === 0) {
+                if (ribbon[1] > 0) {
+                    const numberOfSilverOaks = Math.floor(ribbon[1] / 5);
+                    const remainderBronzeOaks = ribbon[1] % 5;
 
-                // Create silver oak leaves
-                for (let i = 0; i < numberOfSilverOaks; i++) {
-                    const ribbonOak = document.createElement('img');
-                    ribbonOak.src = `ribbons/silver_oak_leaf.svg`;
-                    ribbonOak.className = 'ribbon-oak-img';
-                    oakContainer.appendChild(ribbonOak);
+                    // Create silver oak leaves
+                    for (let i = 0; i < numberOfSilverOaks; i++) {
+                        const ribbonOak = document.createElement('img');
+                        ribbonOak.src = `ribbons/silver_oak_leaf.svg`;
+                        ribbonOak.className = 'ribbon-oak-img';
+                        oakContainer.appendChild(ribbonOak);
+                    }
+
+                    // Create bronze oak leaves for the remainder
+                    for (let i = 0; i < remainderBronzeOaks; i++) {
+                        const ribbonOak = document.createElement('img');
+                        ribbonOak.src = `ribbons/bronze_oak_leaf.svg`;
+                        ribbonOak.className = 'ribbon-oak-img';
+                        oakContainer.appendChild(ribbonOak);
+                    }
                 }
-
-                // Create bronze oak leaves for the remainder
-                for (let i = 0; i < remainderBronzeOaks; i++) {
+            } else {
+                if (ribbon[1] > 0) {
                     const ribbonOak = document.createElement('img');
-                    ribbonOak.src = `ribbons/bronze_oak_leaf.svg`;
+                    ribbonOak.src = `ribbons/` + ribbon[2][ribbon[1]] + `_oak_leaf.svg`;
                     ribbonOak.className = 'ribbon-oak-img';
                     oakContainer.appendChild(ribbonOak);
                 }

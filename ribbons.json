@@ -217,7 +217,8 @@
     },
     {
         "id": 55,
-        "name": "Health and Wellness Ribbon"
+        "name": "Health and Wellness Ribbon",
+        "custom_oaks": ["none", "bronze", "silver", "gold"]
     },
     {
         "id": 56,
@@ -250,5 +251,25 @@
     {
         "id": 63,
         "name": "COVID-19 Ribbon"
+    },
+    {
+        "id": 64,
+        "name": "(CAP) General Carl Spaatz Award"
+    },
+    {
+        "id": 65,
+        "name": "(CAP) General Ira C. Eaker Award"
+    },
+    {
+        "id": 66,
+        "name": "(CAP) Amelia Earhart Award"
+    },
+    {
+        "id": 67,
+        "name": "(CAP) General Billy Mitchell Award"
+    },
+    {
+        "id": 68,
+        "name": "(CAP) General J.F. Curry Achievement Award"
     }
 ]
