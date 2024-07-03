@@ -1,60 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AFJROTC Ribbon Rack Builder</title>
-  <link href="styles.css" rel="stylesheet" />
-</head>
-
-<body>
-
-  <div class="container">
-    <div>
-      <h1>AFJROTC Ribbon Rack Builder</h1>
-      <div style="text-align: center; margin-bottom: 30px;">Check the box next to each ribbon you would like to have
-        sorted.</div>
-    </div>
-    <!-- Tab links -->
-    <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'Ribbons')" id="defaultOpen">Ribbons</button>
-      <button class="tablinks" onclick="openTab(event, 'Badges')">Badges</button>
-      <button class="tablinks" onclick="openTab(event, 'Ranks')">Ranks</button>
-    </div>
-
-    <!-- Tab content -->
-    <div id="Ribbons" class="tabcontent">
-      <h3>Ribbons</h3>
-      <div class="box-selection" id="ribbonSelection">
-        <!-- Ribbons will be populated here -->
-      </div>
-    </div>
-
-    <div id="Badges" class="tabcontent">
-      <h3>Badges</h3>
-      <div class="box-selection" id="badgeSelection">
-        <!-- Badges will be populated here -->
-      </div>
-    </div>
-
-    <div id="Ranks" class="tabcontent">
-      <h3>Ranks</h3>
-      <div class="box-selection" id="rankSelection">
-        <!-- Ranks will be populated here -->
-      </div>
-    </div>
-    <h2>Your Ribbon Rack</h2>
-    <div class="rack" id="rack">
-      <!-- Ribbons will appear here -->
-    </div>
-    <div class="button-group">
-      <button class="save-button" onclick="saveRackImage()">Save Rack as Image</button>
-    </div>
-  </div>
-
-  <script src="https://github.com/yorickshan/html2canvas-pro/releases/download/v1.5.0/html2canvas-pro.min.js"></script>
-  <script src="app.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRB Builder</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
