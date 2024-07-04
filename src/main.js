@@ -9,9 +9,9 @@ import AJROTCView from './AJROTCView.vue';
 import AFJROTCView from './AFJROTCView.vue';
 
 const routes = [
-  { path: '/', component: HomeView },
-  { path: '/ajrotc', component: AJROTCView },
-  { path: '/afjrotc', component: AFJROTCView }
+  { path: '/rrb-builder/', component: HomeView },
+  { path: '/rrb-builder/ajrotc', component: AJROTCView },
+  { path: '/rrb-builder/afjrotc', component: AFJROTCView }
 ];
 
 const router = createRouter({
