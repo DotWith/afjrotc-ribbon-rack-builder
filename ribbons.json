@@ -217,8 +217,7 @@
     },
     {
         "id": 55,
-        "name": "Health and Wellness Ribbon",
-        "custom_oaks": ["none", "bronze", "silver", "gold"]
+        "name": "Health and Wellness Ribbon"
     },
     {
         "id": 56,

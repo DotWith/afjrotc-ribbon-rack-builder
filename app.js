@@ -1,6 +1,3 @@
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
 let selectedRibbons = [];
 let selectedRanks = [];
 let selectedBadges = [];
@@ -78,13 +75,10 @@ fetch('ribbons.json')
         const ribbonSelection = document.getElementById('ribbonSelection');
         data.forEach(ribbon => {
             const label = document.createElement('label');
-            label.classList.add('ribbon-checkbox');
+            label.classList.add('ribbon-option');
 
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
-            if (ribbon.custom_oaks != null) {
-                checkbox.dataset.custom_oaks = ribbon.custom_oaks;
-            }
             checkbox.dataset.ribbon = ribbon.id;
 
             const img = document.createElement('img');
@@ -94,16 +88,11 @@ fetch('ribbons.json')
             const text = document.createTextNode(ribbon.id + ". " + ribbon.name);
 
             const oakNumber = document.createElement('input');
-            oakNumber.className = 'ribbon-checkbox-range';
+            oakNumber.classList.add('ribbon-option-input');
             oakNumber.type = 'range';
             oakNumber.value = 0;
-            if (ribbon.custom_oaks != null) {
-                oakNumber.min = 0;
-                oakNumber.max = ribbon.custom_oaks.length - 1;
-            } else {
-                oakNumber.min = 0;
-                oakNumber.max = 20;
-            }
+            oakNumber.min = 0;
+            oakNumber.max = 25;
             oakNumber.dataset.ribbon = ribbon.id; // Store ribbon id for easy reference
 
             label.appendChild(checkbox);
@@ -120,7 +109,7 @@ fetch('ribbons.json')
             checkbox.addEventListener('change', updateSelectedRibbons);
         });
 
-        const oakNumberInputs = document.querySelectorAll('.ribbon-checkbox-range');
+        const oakNumberInputs = document.querySelectorAll('.ribbon-option-input');
         oakNumberInputs.forEach(input => {
             input.addEventListener('input', updateSelectedRibbons);
         });
@@ -139,11 +128,8 @@ function updateSelectedRibbons() {
         .filter(checkbox => checkbox.checked)
         .map(checkbox => {
             const ribbonId = parseInt(checkbox.dataset.ribbon);
-            const oakNumber = parseInt(document.querySelector(`.ribbon-checkbox-range[data-ribbon="${checkbox.dataset.ribbon}"]`).value);
-            const customOaks = checkbox.dataset.custom_oaks ? checkbox.dataset.custom_oaks.split(',').map(oak => oak.trim()) : [];
-            console.log(customOaks);
-
-            return [ribbonId, oakNumber, customOaks];
+            const oakNumber = parseInt(document.querySelector(`.ribbon-option-input[data-ribbon="${checkbox.dataset.ribbon}"]`).value); 
+            return [ribbonId, oakNumber, []];
         });
 
     updateRack();
@@ -207,8 +193,17 @@ function updateRack() {
 
             if (Array.isArray(ribbon[2]) && ribbon[2].length === 0) {
                 if (ribbon[1] > 0) {
-                    const numberOfSilverOaks = Math.floor(ribbon[1] / 5);
+                    const numberOfGoldenOaks = Math.floor(ribbon[1] / 5 / 5);
+                    const numberOfSilverOaks = Math.floor((ribbon[1] % 25) / 5);
                     const remainderBronzeOaks = ribbon[1] % 5;
+
+                    // Create golden oak leaves
+                    for (let i = 0; i < numberOfGoldenOaks; i++) {
+                        const ribbonOak = document.createElement('img');
+                        ribbonOak.src = `ribbons/golden_oak_leaf.svg`;
+                        ribbonOak.className = 'ribbon-oak-img';
+                        oakContainer.appendChild(ribbonOak);
+                    }
 
                     // Create silver oak leaves
                     for (let i = 0; i < numberOfSilverOaks; i++) {
@@ -279,8 +274,8 @@ function sortRibbons(ribbons) {
     return rows;
 }
 
-function saveRackImage() {
-    html2canvas(document.getElementById('rack'), { backgroundColor: null }).then(canvas => {
+function saveRackPng() {
+    html2canvas(document.getElementById('rack'), { backgroundColor: null, scale: 4 }).then(canvas => {
         const link = document.createElement('a');
         link.href = canvas.toDataURL('image/png');
         link.download = 'ribbon_rack.png';
@@ -293,18 +288,18 @@ function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
 
     // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
     // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
+    tablinks = document.querySelectorAll('[id=tab]');
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = "bg-inactive";
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+    evt.currentTarget.className = "bg-active";
 } 

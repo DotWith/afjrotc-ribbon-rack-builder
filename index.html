@@ -16,40 +16,48 @@
       <div style="text-align: center; margin-bottom: 30px;">Check the box next to each ribbon you would like to have
         sorted.</div>
     </div>
-    <!-- Tab links -->
-    <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'Ribbons')" id="defaultOpen">Ribbons</button>
-      <button class="tablinks" onclick="openTab(event, 'Badges')">Badges</button>
-      <button class="tablinks" onclick="openTab(event, 'Ranks')">Ranks</button>
-    </div>
+    <!-- Tabs -->
+    <div class="tabs">
+      <ul>
+        <li class="bg-active" id="tab" onclick="openTab(event, 'Ribbons')">Ribbons</li>
+        <li class="bg-inactive" id="tab" onclick="openTab(event, 'Ranks')">Ranks</li>
+        <li class="bg-inactive" id="tab" onclick="openTab(event, 'Badges')">Badges</li>
+      </ul>
 
-    <!-- Tab content -->
-    <div id="Ribbons" class="tabcontent">
-      <h3>Ribbons</h3>
-      <div class="box-selection" id="ribbonSelection">
-        <!-- Ribbons will be populated here -->
+      <!-- Tab content --> 
+      <div id="Ribbons" class="tab-content">
+        <slot>
+          <div class="box-selection" id="ribbonSelection">
+            <!-- Ribbons will be populated here -->
+          </div>
+        </slot>
+      </div>
+  
+      <div id="Ranks" class="tab-content" style="display: none;">
+        <slot>
+          <div class="box-selection" id="rankSelection">
+            <!-- Ranks will be populated here -->
+          </div>
+        </slot>
+      </div>
+      
+      <div id="Badges" class="tab-content" style="display: none;">
+        <slot>
+          <div class="box-selection" id="badgeSelection">
+            <!-- Badges will be populated here -->
+          </div>
+        </slot>
       </div>
     </div>
 
-    <div id="Badges" class="tabcontent">
-      <h3>Badges</h3>
-      <div class="box-selection" id="badgeSelection">
-        <!-- Badges will be populated here -->
-      </div>
-    </div>
-
-    <div id="Ranks" class="tabcontent">
-      <h3>Ranks</h3>
-      <div class="box-selection" id="rankSelection">
-        <!-- Ranks will be populated here -->
-      </div>
-    </div>
     <h2>Your Ribbon Rack</h2>
-    <div class="rack" id="rack">
-      <!-- Ribbons will appear here -->
+    <div class="rack-container">
+      <div class="rack" id="rack">
+        <!-- Ribbons will appear here -->
+      </div>
     </div>
     <div class="button-group">
-      <button class="save-button" onclick="saveRackImage()">Save Rack as Image</button>
+      <button class="save-button" onclick="saveRackPng()">Save Rack as .png</button>
     </div>
   </div>
 

@@ -45,8 +45,8 @@ h3 {
 }
 
 .container {
-    max-width: 600px;
-    margin: auto;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -54,38 +54,79 @@ h3 {
     margin-bottom: 20px;
 }
 
-.ribbon-checkbox {
+input[type="radio"],
+input[type="checkbox"] {
     margin-right: 24px;
+    height: 15px;
+    width: 15px;
+    accent-color: rgb(213, 210, 204);
+    flex-shrink: 0;
+}
+
+input[type="range"] {
+    appearance: none;
+    width: 125px;
+    height: 15px;
+    background: #ccc;
+    border: 1px solid #999;
+    border-radius: 1px;
+    margin-left: auto;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #555;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 1px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #555;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 1px;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background: #555;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 1px;
+}
+
+.ribbon-option {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
-.ribbon-checkbox input {
-    margin-right: 24px;
-    height: 26px;
-    accent-color: rgb(213, 210, 204);
-}
-
-.ribbon-checkbox-range {
+.ribbon-option input[type="range"] {
     margin-left: auto;
-} 
+}
 
-.ribbon-checkbox img {
+.ribbon-option img {
     width: 100px;
     height: 30px;
     margin-right: 24px;
+    object-fit: contain;
+}
+
+.ribbon-option label {
+    cursor: pointer;
 }
 
 .rank-radio {
     margin-right: 24px;
     display: flex;
     align-items: center;
-}
-
-.rank-radio input {
-    margin-right: 24px;
-    height: 26px;
-    accent-color: rgb(213, 210, 204);
 }
 
 .rank-radio img {
@@ -100,19 +141,20 @@ h3 {
     align-items: center;
 }
 
-.badge-checkbox input {
-    margin-right: 24px;
-    height: 26px;
-    accent-color: rgb(213, 210, 204);
-}
-
 .badge-checkbox img {
     width: 60px;
     height: 60px;
     margin-right: 24px;
 }
 
+.rack-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .rack {
+    width: 600px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -177,7 +219,7 @@ h3 {
     gap: 10px;
 }
 
-.save-button {
+button {
     font-family: StratumBold;
     font-style: normal;
     font-weight: 500;
@@ -195,38 +237,37 @@ h3 {
     border-radius: 0px;
 }
 
-/* Style the tab */
-.tab {
-    overflow: hidden;
+.tabs {
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
 }
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
+.tabs ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tabs li {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    padding: 1rem 0;
     cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
+    border-bottom: 1px solid #ccc;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
+.tab-content div {
+    padding: 2rem;
 }
 
-/* Create an active/current tablink class */
-.tab button.active {
+.bg-inactive {
+    background-color: white;
+}
+
+.bg-active {
     background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
 }
