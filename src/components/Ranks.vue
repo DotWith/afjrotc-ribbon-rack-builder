@@ -19,7 +19,7 @@ const { checkedRanks, getRankSvgPath } = inject('checkedRanks');
 
 const loadRanksData = async (folder) => {
     try {
-        const jsonData = await import(`/src/assets/${folder}/ranks/_meta.json`);
+        const jsonData = await import(`./src/assets/${folder}/ranks/_meta.json`);
         ranks.value = jsonData.default;
     } catch (error) {
         console.error(`Error loading ranks data from folder ${folder}:`, error);

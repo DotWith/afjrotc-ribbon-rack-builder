@@ -17,7 +17,7 @@ const { checkedRibbons, getRibbonSvgPath } = inject('checkedRibbons');
 
 const loadRibbonsData = async (folder) => {
     try {
-        const jsonData = await import(`/src/assets/${folder}/ribbons/_meta.json`);
+        const jsonData = await import(`./src/assets/${folder}/ribbons/_meta.json`);
         ribbons.value = jsonData.default;
     } catch (error) {
         console.error(`Error loading ribbons data from folder ${folder}:`, error);

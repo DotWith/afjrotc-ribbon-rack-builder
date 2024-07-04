@@ -16,7 +16,7 @@ const { checkedBadges, getBadgeSvgPath } = inject('checkedBadges');
 
 const loadBadgesData = async (folder) => {
     try {
-        const jsonData = await import(`/src/assets/${folder}/badges/_meta.json`);
+        const jsonData = await import(`./src/assets/${folder}/badges/_meta.json`);
         badges.value = jsonData.default;
     } catch (error) {
         console.error(`Error loading badges data from folder ${folder}:`, error);
