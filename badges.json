@@ -42,5 +42,17 @@
     {
         "path": "aefb.svg",
         "name": "AEF Badge"
+    },
+    {
+        "path": "msb.svg",
+        "name": "Unit Awarded Marksmanship Badge"
+    },
+    {
+        "path": "msb_sharpshooter.svg",
+        "name": "Unit Awarded Marksmanship Sharpshooter Badge"
+    },
+    {
+        "path": "msb_expert.svg",
+        "name": "Unit Awarded Marksmanship Expert Badge"
     }
 ]
