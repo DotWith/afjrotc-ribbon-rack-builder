@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "test": "node server.js"
+    "webber": "webpack",
+    "build": "node server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://github.com/DotWith/afjrotc-ribbon-rack-builder/",
   "keywords": [],
   "author": "DotWith",
   "license": "Apache-2.0 or MIT",
