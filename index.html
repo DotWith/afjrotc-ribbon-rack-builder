@@ -24,7 +24,7 @@
         <li class="bg-inactive" id="tab" onclick="openTab(event, 'Badges')">Badges</li>
       </ul>
 
-      <!-- Tab content -->
+      <!-- Tab content --> 
       <div id="Ribbons" class="tab-content">
         <slot>
           <div class="box-selection" id="ribbonSelection">
@@ -32,7 +32,7 @@
           </div>
         </slot>
       </div>
-
+  
       <div id="Ranks" class="tab-content" style="display: none;">
         <slot>
           <div class="box-selection" id="rankSelection">
@@ -40,7 +40,7 @@
           </div>
         </slot>
       </div>
-
+      
       <div id="Badges" class="tab-content" style="display: none;">
         <slot>
           <div class="box-selection" id="badgeSelection">
@@ -57,11 +57,12 @@
       </div>
     </div>
     <div class="button-group">
-      <button id="capture" class="save-button">Save Rack as .png</button>
+      <button class="save-button" onclick="saveRackPng()">Save Rack as .png</button>
     </div>
   </div>
 
-  <script src="bundle.js"></script>
+  <script src="https://github.com/yorickshan/html2canvas-pro/releases/download/v1.5.0/html2canvas-pro.min.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,16 @@
 @font-face {
     font-family: FFDINWeb;
-    src: url('fonts/DIN.ttf');
+    src: url('DIN.ttf');
 }
 
 @font-face {
     font-family: Stratum;
-    src: url('fonts/stratum-no1-6.ttf');
+    src: url('stratum-no1-6.ttf');
 }
 
 @font-face {
     font-family: StratumBold;
-    src: url('fonts/stratum-no1-2.ttf');
+    src: url('stratum-no1-2.ttf');
 }
 
 body {
@@ -205,6 +205,10 @@ input[type="range"]::-ms-thumb {
     margin-bottom: 10px;
     gap: 10px;
 }
+
+/* .rack .row img {
+    margin: 0 5px;
+} */
 
 .button-group {
     margin-top: 20px;

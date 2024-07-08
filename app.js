@@ -1,10 +1,8 @@
-import html2canvas from 'html2canvas-pro';
-
 let selectedRibbons = [];
 let selectedRanks = [];
 let selectedBadges = [];
 
-fetch('badges/_meta.json')
+fetch('badges.json')
     .then(response => response.json())
     .then(data => {
         const badgeSelection = document.getElementById('badgeSelection');
@@ -36,7 +34,7 @@ fetch('badges/_meta.json')
         });
     });
 
-fetch('ranks/_meta.json')
+fetch('ranks.json')
     .then(response => response.json())
     .then(data => {
         const rankSelection = document.getElementById('rankSelection');
@@ -71,7 +69,7 @@ fetch('ranks/_meta.json')
         });
     });
 
-fetch('ribbons/_meta.json')
+fetch('ribbons.json')
     .then(response => response.json())
     .then(data => {
         const ribbonSelection = document.getElementById('ribbonSelection');
@@ -284,8 +282,6 @@ function saveRackPng() {
         link.click();
     });
 }
-
-document.getElementById('capture').addEventListener('click', saveRackPng);
 
 function openTab(evt, tabName) {
     // Declare all variables
