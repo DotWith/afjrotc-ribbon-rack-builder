@@ -1,0 +1,21 @@
+{
+  "name": "rrb-builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "node server.js"
+  },
+  "keywords": [],
+  "author": "DotWith",
+  "license": "Apache-2.0 or MIT",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "html2canvas-pro": "^1.5.4"
+  },
+  "devDependencies": {
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
