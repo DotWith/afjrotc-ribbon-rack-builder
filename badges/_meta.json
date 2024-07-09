@@ -1,0 +1,78 @@
+[
+    {
+        "path": "01_officers_service_cap_insignia.svg",
+        "name": "HAP Arnold Optional Enlisted/Officer Service CAP Insignia"
+    },
+    {
+        "path": "02_officers_service_cap_insignia.svg",
+        "name": "Officers Service CAP Insignia"
+    },
+    {
+        "path": "model_rocketry_badge.svg",
+        "name": "Model Rocketry Badge"
+    },
+    {
+        "path": "khhs_badge.svg",
+        "name": "Kitty Hawk Honor Society Badge"
+    },
+    {
+        "path": "distinguished_cadet_badge.svg",
+        "name": "Distinguished Cadet Badge"
+    },
+    {
+        "path": "ground_school_badge.svg",
+        "name": "Ground School Badge"
+    },
+    {
+        "path": "flight_solo_badge.svg",
+        "name": "Flight Solo Badge"
+    },
+    {
+        "path": "flight_certifcate_badge.svg",
+        "name": "Flight Certifcate Badge"
+    },
+    {
+        "path": "unmanned_aircraft_badge.svg",
+        "name": "Unmanned Aircraft Badge"
+    },
+    {
+        "path": "marksmanship_shield_badge.svg",
+        "name": "Marksmanship Shield Badge"
+    },
+    {
+        "path": "apt_badge.svg",
+        "name": "APT Badge"
+    },
+    {
+        "path": "cyberpatriot_badge.svg",
+        "name": "CyberPatriot Badge"
+    },
+    {
+        "path": "aef_badge.svg",
+        "name": "AEF Badge"
+    },
+    {
+        "path": "cmp_junior_gold_distinguished_badge.svg",
+        "name": "CMP Gold Junior Distinguished Badge"
+    },
+    {
+        "path": "cmp_junior_silver_distinguished_badge.svg",
+        "name": "CMP Silver Junior Distinguished Badge"
+    },
+    {
+        "path": "cmp_junior_bronze_distinguished_badge.svg",
+        "name": "CMP Bronze Junior Distinguished Badge"
+    },
+    {
+        "path": "ms_marksman_badge.svg",
+        "name": "Marksmanship Marksman Badge"
+    },
+    {
+        "path": "ms_sharpshooter_badge.svg",
+        "name": "Marksmanship Sharpshooter Badge"
+    },
+    {
+        "path": "ms_expert_badge.svg",
+        "name": "Marksmanship Expert Badge"
+    }
+]

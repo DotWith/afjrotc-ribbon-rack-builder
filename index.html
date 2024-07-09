@@ -21,10 +21,11 @@
       <ul>
         <li class="bg-active" id="tab" onclick="openTab(event, 'Ribbons')">Ribbons</li>
         <li class="bg-inactive" id="tab" onclick="openTab(event, 'Ranks')">Ranks</li>
+        <li class="bg-inactive" id="tab" onclick="openTab(event, 'Arcs')">Arcs</li>
         <li class="bg-inactive" id="tab" onclick="openTab(event, 'Badges')">Badges</li>
       </ul>
 
-      <!-- Tab content --> 
+      <!-- Tab content -->
       <div id="Ribbons" class="tab-content">
         <slot>
           <div class="box-selection" id="ribbonSelection">
@@ -32,7 +33,7 @@
           </div>
         </slot>
       </div>
-  
+
       <div id="Ranks" class="tab-content" style="display: none;">
         <slot>
           <div class="box-selection" id="rankSelection">
@@ -40,7 +41,15 @@
           </div>
         </slot>
       </div>
-      
+
+      <div id="Arcs" class="tab-content" style="display: none;">
+        <slot>
+          <div class="box-selection" id="arcSelection">
+            <!-- Arcs will be populated here -->
+          </div>
+        </slot>
+      </div>
+
       <div id="Badges" class="tab-content" style="display: none;">
         <slot>
           <div class="box-selection" id="badgeSelection">
@@ -49,7 +58,6 @@
         </slot>
       </div>
     </div>
-
     <h2>Your Ribbon Rack</h2>
     <div class="rack-container">
       <div class="rack" id="rack">

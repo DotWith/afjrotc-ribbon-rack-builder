@@ -1,16 +1,16 @@
 @font-face {
     font-family: FFDINWeb;
-    src: url('DIN.ttf');
+    src: url('fonts/FFDINWeb.ttf');
 }
 
 @font-face {
     font-family: Stratum;
-    src: url('stratum-no1-6.ttf');
+    src: url('fonts/Stratum.ttf');
 }
 
 @font-face {
     font-family: StratumBold;
-    src: url('stratum-no1-2.ttf');
+    src: url('fonts/StratumBold.ttf');
 }
 
 body {
@@ -45,7 +45,7 @@ h3 {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }

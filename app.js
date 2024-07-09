@@ -1,8 +1,41 @@
 let selectedRibbons = [];
 let selectedRanks = [];
 let selectedBadges = [];
+let selectedArcs = [];
 
-fetch('badges.json')
+fetch('arcs/_meta.json')
+    .then(response => response.json())
+    .then(data => {
+        const arcSelection = document.getElementById('arcSelection');
+        data.forEach(arc => {
+            const label = document.createElement('label');
+            label.classList.add('badge-checkbox');
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.dataset.arc = arc.path;
+
+            const img = document.createElement('img');
+            img.src = `arcs/${arc.path}`;
+            img.alt = arc.name;
+
+            const text = document.createTextNode(arc.name);
+
+            label.appendChild(checkbox);
+            label.appendChild(img);
+            label.appendChild(text);
+
+            arcSelection.appendChild(label);
+        });
+
+        // Update selected arcs when checkboxes are changed
+        const arcCheckboxes = document.querySelectorAll('input[data-arc]');
+        arcCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateSelectedRibbons);
+        });
+    });
+
+fetch('badges/_meta.json')
     .then(response => response.json())
     .then(data => {
         const badgeSelection = document.getElementById('badgeSelection');
@@ -34,33 +67,38 @@ fetch('badges.json')
         });
     });
 
-fetch('ranks.json')
+fetch('ranks/_meta.json')
     .then(response => response.json())
     .then(data => {
+        function makeRanks(data, kind, rankSelection) {
+            data[kind].forEach(rank => {
+                const label = document.createElement('label');
+                label.classList.add('rank-radio');
+
+                const radio = document.createElement('input');
+                radio.dataset.rank = `${kind}/${rank.id}`;
+                radio.type = 'radio';
+                radio.name = 'rank';
+                radio.value = rank.id;
+                label.appendChild(radio);
+
+                if (rank.id != 1 || kind != "enlisted") {
+                    const img = document.createElement('img');
+                    img.src = `ranks/${kind}/${rank.id}.svg`;
+                    img.alt = rank.name;
+                    label.appendChild(img);
+                }
+
+                const text = document.createTextNode(`[${kind[0].toUpperCase()}-${rank.id}] ${rank.name}`);
+                label.appendChild(text);
+
+                rankSelection.appendChild(label);
+            });
+        }
+
         const rankSelection = document.getElementById('rankSelection');
-        data.forEach(rank => {
-            const label = document.createElement('label');
-            label.classList.add('rank-radio');
-
-            const radio = document.createElement('input');
-            radio.dataset.rank = rank.id;
-            radio.type = 'radio';
-            radio.name = 'rank';
-            radio.value = rank.id;
-            label.appendChild(radio);
-
-            if (rank.id != 0) {
-                const img = document.createElement('img');
-                img.src = `ranks/${rank.id}.svg`;
-                img.alt = rank.name;
-                label.appendChild(img);
-            }
-
-            const text = document.createTextNode(rank.id + ". " + rank.name);
-            label.appendChild(text);
-
-            rankSelection.appendChild(label);
-        });
+        makeRanks(data, 'enlisted', rankSelection);
+        makeRanks(data, 'officer', rankSelection);
 
         // Update selected ranks when radios are changed
         const ranksRadios = document.querySelectorAll('input[data-rank]');
@@ -69,7 +107,7 @@ fetch('ranks.json')
         });
     });
 
-fetch('ribbons.json')
+fetch('ribbons/_meta.json')
     .then(response => response.json())
     .then(data => {
         const ribbonSelection = document.getElementById('ribbonSelection');
@@ -116,19 +154,23 @@ fetch('ribbons.json')
     });
 
 function updateSelectedRibbons() {
+    selectedArcs = Array.from(document.querySelectorAll('input[data-arc]'))
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.dataset.arc);
+
     selectedBadges = Array.from(document.querySelectorAll('input[data-badge]'))
         .filter(checkbox => checkbox.checked)
         .map(checkbox => checkbox.dataset.badge);
 
     selectedRanks = Array.from(document.querySelectorAll('input[data-rank]'))
         .filter(radio => radio.checked)
-        .map(radio => parseInt(radio.dataset.rank));
+        .map(radio => radio.dataset.rank);
 
     selectedRibbons = Array.from(document.querySelectorAll('input[data-ribbon]'))
         .filter(checkbox => checkbox.checked)
         .map(checkbox => {
             const ribbonId = parseInt(checkbox.dataset.ribbon);
-            const oakNumber = parseInt(document.querySelector(`.ribbon-option-input[data-ribbon="${checkbox.dataset.ribbon}"]`).value); 
+            const oakNumber = parseInt(document.querySelector(`.ribbon-option-input[data-ribbon="${checkbox.dataset.ribbon}"]`).value);
             return [ribbonId, oakNumber, []];
         });
 
@@ -147,7 +189,7 @@ function updateRack() {
     const badgesRow = [];
 
     selectedRanks.forEach(rank => {
-        if (rank == 0) {
+        if (rank == "enlisted/1") {
             return;
         }
 
@@ -164,6 +206,14 @@ function updateRack() {
         badgeElement.className = 'rack-badge-img';
 
         badgesRow.push(badgeElement);
+    });
+
+    selectedArcs.forEach(badge => {
+        const arcElement = document.createElement('img');
+        arcElement.src = `arcs/${badge}`;
+        arcElement.className = 'rack-badge-img';
+
+        badgesRow.push(arcElement);
     });
 
     // Loop through the ribbons in the current row
