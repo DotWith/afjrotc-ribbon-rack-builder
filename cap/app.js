@@ -196,6 +196,7 @@ function updateRack() {
         const rankElement = document.createElement('img');
         rankElement.src = `ranks/${rank}.svg`;
         rankElement.className = 'rack-badge-img';
+        rankElement.setAttribute('crossorigin', 'anonymous'); 
 
         badgesRow.push(rankElement);
     });
@@ -204,6 +205,7 @@ function updateRack() {
         const badgeElement = document.createElement('img');
         badgeElement.src = `badges/${badge}`;
         badgeElement.className = 'rack-badge-img';
+        badgeElement.setAttribute('crossorigin', 'anonymous'); 
 
         badgesRow.push(badgeElement);
     });
@@ -212,6 +214,7 @@ function updateRack() {
         const tapeElement = document.createElement('img');
         tapeElement.src = `tapes/${badge}`;
         tapeElement.className = 'rack-badge-img';
+        tapeElement.setAttribute('crossorigin', 'anonymous'); 
 
         badgesRow.push(tapeElement);
     });
@@ -236,6 +239,7 @@ function updateRack() {
             const ribbonElement = document.createElement('img');
             ribbonElement.src = `ribbons/${ribbon[0]}.svg`;
             ribbonElement.className = 'rack-ribbon-img';
+            ribbonElement.setAttribute('crossorigin', 'anonymous'); 
             ribbonContainer.appendChild(ribbonElement);
 
             const oakContainer = document.createElement('div');
@@ -252,6 +256,7 @@ function updateRack() {
                         const ribbonOak = document.createElement('img');
                         ribbonOak.src = `ribbons/golden_oak_leaf.svg`;
                         ribbonOak.className = 'ribbon-oak-img';
+                        ribbonOak.setAttribute('crossorigin', 'anonymous'); 
                         oakContainer.appendChild(ribbonOak);
                     }
 
@@ -260,6 +265,7 @@ function updateRack() {
                         const ribbonOak = document.createElement('img');
                         ribbonOak.src = `ribbons/silver_oak_leaf.svg`;
                         ribbonOak.className = 'ribbon-oak-img';
+                        ribbonOak.setAttribute('crossorigin', 'anonymous'); 
                         oakContainer.appendChild(ribbonOak);
                     }
 
@@ -268,6 +274,7 @@ function updateRack() {
                         const ribbonOak = document.createElement('img');
                         ribbonOak.src = `ribbons/bronze_oak_leaf.svg`;
                         ribbonOak.className = 'ribbon-oak-img';
+                        ribbonOak.setAttribute('crossorigin', 'anonymous'); 
                         oakContainer.appendChild(ribbonOak);
                     }
                 }
@@ -276,6 +283,7 @@ function updateRack() {
                     const ribbonOak = document.createElement('img');
                     ribbonOak.src = `ribbons/` + ribbon[2][ribbon[1]] + `_oak_leaf.svg`;
                     ribbonOak.className = 'ribbon-oak-img';
+                    ribbonOak.setAttribute('crossorigin', 'anonymous');
                     oakContainer.appendChild(ribbonOak);
                 }
             }
