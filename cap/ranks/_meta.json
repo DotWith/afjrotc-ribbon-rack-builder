@@ -1,0 +1,24 @@
+{
+    "enlisted": [
+        { "id": 1, "name": "Cadet Airman Basic" },
+        { "id": 2, "name": "Cadet Airman" },
+        { "id": 3, "name": "Cadet Airman First Class" },
+        { "id": 4, "name": "Cadet Senior Airman" },
+        { "id": 5, "name": "Cadet Staff Sergeant" },
+        { "id": 6, "name": "Cadet Technical Sergeant" },
+        { "id": 7, "name": "Cadet Master Sergeant" },
+        { "id": 8, "name": "Cadet Senior Master Sergeant" },
+        { "id": 9, "name": "Cadet Chief Master Sergeant" },
+        { "id": 10.7, "name": "Cadet First Sergeant" },
+        { "id": 10.8, "name": "Cadet First Sergeant" },
+        { "id": 10.9, "name": "Cadet First Sergeant" }
+    ],
+    "officer": [
+        { "id": 1, "name": "Cadet Second Lieutenant" },
+        { "id": 2, "name": "Cadet First Lieutenant" },
+        { "id": 3, "name": "Cadet Captain" },
+        { "id": 4, "name": "Cadet Major" },
+        { "id": 5, "name": "Cadet Lieutenant Colonel" },
+        { "id": 6, "name": "Cadet Colonel" }
+    ]
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="106.626"
+   height="106.626"
+   id="svg6"
+   sodipodi:docname="1.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="3.7974087"
+     inkscape:cx="1.5800248"
+     inkscape:cy="53.0625"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <linearGradient
+     id="a"
+     x1="191.60741"
+     y1="14.1836"
+     x2="124.1074"
+     y2="94.808601"
+     gradientUnits="userSpaceOnUse">
+    <stop
+       offset="0"
+       stop-color="#fff"
+       id="stop1" />
+    <stop
+       offset="1"
+       stop-color="#000"
+       id="stop2" />
+  </linearGradient>
+  <linearGradient
+     id="b"
+     x1="125.9707"
+     y1="92.330101"
+     x2="188.2205"
+     y2="19.205299"
+     gradientUnits="userSpaceOnUse">
+    <stop
+       offset="0"
+       stop-color="#fff"
+       id="stop3" />
+    <stop
+       offset="1"
+       stop-color="#000"
+       id="stop4" />
+  </linearGradient>
+  <pattern
+     id="p"
+     x="1.28"
+     y="1.25"
+     width="1.44"
+     height="1.44"
+     patternUnits="userSpaceOnUse">
+    <path
+       d="m0,0h1.44v1.44H0z"
+       fill="#808080"
+       stroke="#4D4D4D"
+       stroke-width=".25"
+       id="path4" />
+  </pattern>
+  <g
+     id="c"
+     transform="translate(-104.437,-1.3120003)">
+    <circle
+       fill="url(#a)"
+       stroke="#000000"
+       stroke-width="0.5"
+       cx="157.75"
+       cy="54.625"
+       r="53.063"
+       id="circle4"
+       style="fill:url(#a)" />
+    <circle
+       fill="url(#b)"
+       cx="157.75"
+       cy="55"
+       r="41.813"
+       id="circle5"
+       style="fill:url(#b)" />
+    <circle
+       fill="url(#p)"
+       stroke="none"
+       cx="157.875"
+       cy="54.979"
+       r="40.977001"
+       id="circle6" />
+  </g>
+</svg>

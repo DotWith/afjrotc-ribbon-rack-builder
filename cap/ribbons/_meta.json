@@ -1,0 +1,166 @@
+[
+    {
+        "id": 1,
+        "name": "Silver Medal of Valor"
+    },
+    {
+        "id": 2,
+        "name": "Bronze Medal of Valor"
+    },
+    {
+        "id": 3,
+        "name": "Distinguished Service Award"
+    },
+    {
+        "id": 4,
+        "name": "Exceptional Service Award"
+    },
+    {
+        "id": 5,
+        "name": "Meritorious Service Award"
+    },
+    {
+        "id": 6,
+        "name": "Commander's Commendation Award"
+    },
+    {
+        "id": 7,
+        "name": "CAP Achievement Award"
+    },
+    {
+        "id": 8,
+        "name": "Certificate of Recognition for Lifesaving"
+    },
+    {
+        "id": 9,
+        "name": "National Commander's Unit Citation Award"
+    },
+    {
+        "id": 10,
+        "name": "Unit Citation Award"
+    },
+    {
+        "id": 11,
+        "name": "General Carl A. Spaatz Award"
+    },
+    {
+        "id": 12,
+        "name": "General Ira C. Eaker Award"
+    },
+    {
+        "id": 13,
+        "name": "Amelia Earhart Award"
+    },
+    {
+        "id": 14,
+        "name": "General Billy Mitchell Award"
+    },
+    {
+        "id": 15,
+        "name": "Neil Armstrong Achievement"
+    },
+    {
+        "id": 16,
+        "name": "Dr. Robert H. Goddard Achievement"
+    },
+    {
+        "id": 17,
+        "name": "General Jimmy F. Doolittle Achievement"
+    },
+    {
+        "id": 18,
+        "name": "Charles A. Lindbergh Achievement"
+    },
+    {
+        "id": 19,
+        "name": "Captain Eddie Rickenbacker Achievement"
+    },
+    {
+        "id": 20,
+        "name": "Wright Brothers Award"
+    },
+    {
+        "id": 21,
+        "name": "Mary Feik Achievement"
+    },
+    {
+        "id": 22,
+        "name": "General Hap Arnold Achievement"
+    },
+    {
+        "id": 23,
+        "name": "General J.F. Curry Achievement Award"
+    },
+    {
+        "id": 24,
+        "name": "AFA Squadron Cadet of the Year"
+    },
+    {
+        "id": 25,
+        "name": "AFSA Squadron NCO of the Year"
+    },
+    {
+        "id": 26,
+        "name": "VFW Cadet Officer Award"
+    },
+    {
+        "id": 27,
+        "name": "VFW Cadet NCO Award"
+    },
+    {
+        "id": 28,
+        "name": "CAP Crisis Service Ribbon"
+    },
+    {
+        "id": 29,
+        "name": "Red Service Ribbon"
+    },
+    {
+        "id": 30,
+        "name": "Search “Find” Ribbon"
+    },
+    {
+        "id": 31,
+        "name": "Air Search and Rescue Ribbon"
+    },
+    {
+        "id": 32,
+        "name": "Disaster Relief Ribbon"
+    },
+    {
+        "id": 33,
+        "name": "Homeland Security Ribbon"
+    },
+    {
+        "id": 34,
+        "name": "Community Service Ribbon"
+    },
+    {
+        "id": 35,
+        "name": "International Air Cadet Exchange"
+    },
+    {
+        "id": 36,
+        "name": "National Cadet Competition Ribbon"
+    },
+    {
+        "id": 37,
+        "name": "National Color Guard Competition Ribbon"
+    },
+    {
+        "id": 38,
+        "name": "Cadet Advisory Council Ribbon"
+    },
+    {
+        "id": 39,
+        "name": "Cadet Special Activity Ribbon"
+    },
+    {
+        "id": 40,
+        "name": "Encampment Ribbon"
+    },
+    {
+        "id": 41,
+        "name": "Cadet Recruiter Ribbon"
+    }
+]

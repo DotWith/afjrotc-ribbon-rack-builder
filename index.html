@@ -2,75 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AFJROTC Ribbon Rack Builder</title>
-  <link href="styles.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFJROTC/CAP Ribbon Rack Builder</title>
+    <link href="index.css" rel="stylesheet" />
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons form button {
+            height: auto;
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 
 <body>
-
-  <div class="container">
-    <div>
-      <h1>AFJROTC Ribbon Rack Builder</h1>
-      <div style="text-align: center; margin-bottom: 30px;">Check the box next to each ribbon you would like to have
-        sorted.</div>
+    <div class="container">
+        <h1>AFJROTC & Civil Air Patrol RRB Builder</h1>
+        <div style="text-align: center; margin-bottom: 30px;">Used by NJ-20181.</div>
+        <div class="buttons">
+            <form action="afjrotc/app.html">
+                <button id="close-image"><img src="afjrotc_logo.svg"></button>
+            </form>
+        
+            <form action="cap/app.html">
+                <button id="close-image"><img src="cap_logo.svg"></button>
+            </form>
+        </div>
     </div>
-    <!-- Tabs -->
-    <div class="tabs">
-      <ul>
-        <li class="bg-active" id="tab" onclick="openTab(event, 'Ribbons')">Ribbons</li>
-        <li class="bg-inactive" id="tab" onclick="openTab(event, 'Ranks')">Ranks</li>
-        <li class="bg-inactive" id="tab" onclick="openTab(event, 'Arcs')">Arcs</li>
-        <li class="bg-inactive" id="tab" onclick="openTab(event, 'Badges')">Badges</li>
-      </ul>
-
-      <!-- Tab content -->
-      <div id="Ribbons" class="tab-content">
-        <slot>
-          <div class="box-selection" id="ribbonSelection">
-            <!-- Ribbons will be populated here -->
-          </div>
-        </slot>
-      </div>
-
-      <div id="Ranks" class="tab-content" style="display: none;">
-        <slot>
-          <div class="box-selection" id="rankSelection">
-            <!-- Ranks will be populated here -->
-          </div>
-        </slot>
-      </div>
-
-      <div id="Arcs" class="tab-content" style="display: none;">
-        <slot>
-          <div class="box-selection" id="arcSelection">
-            <!-- Arcs will be populated here -->
-          </div>
-        </slot>
-      </div>
-
-      <div id="Badges" class="tab-content" style="display: none;">
-        <slot>
-          <div class="box-selection" id="badgeSelection">
-            <!-- Badges will be populated here -->
-          </div>
-        </slot>
-      </div>
-    </div>
-    <h2>Your Ribbon Rack</h2>
-    <div class="rack-container">
-      <div class="rack" id="rack">
-        <!-- Ribbons will appear here -->
-      </div>
-    </div>
-    <div class="button-group">
-      <button class="save-button" onclick="saveRackPng()">Save Rack as .png</button>
-    </div>
-  </div>
-
-  <script src="https://github.com/yorickshan/html2canvas-pro/releases/download/v1.5.0/html2canvas-pro.min.js"></script>
-  <script src="app.js"></script>
 </body>
 
 </html>

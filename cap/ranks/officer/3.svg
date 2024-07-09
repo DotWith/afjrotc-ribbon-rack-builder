@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" width="312.75" height="108.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <linearGradient id="a" x1="291.8574" y1="13.9346" x2="224.3574" y2="94.5596" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fff"/>
+    <stop offset="1" stop-color="#000"/>
+  </linearGradient>
+  <linearGradient id="b" x1="226.2207" y1="92.0811" x2="288.4705" y2="18.9563" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fff"/>
+    <stop offset="1" stop-color="#000"/>
+  </linearGradient>
+  <pattern id="p" x=".6" y="1.05" width="1.44" height="1.44" patternUnits="userSpaceOnUse">
+    <path d="m0,0h1.44v1.44H0z" fill="#808080" stroke="#4D4D4D" stroke-width=".25"/>
+  </pattern>
+  <g id="c">
+    <circle fill="url(#a)" stroke="#000" stroke-width=".5" cx="258" cy="54.375" r="53.063"/>
+    <circle fill="url(#b)" cx="258" cy="54.75" r="41.813"/>
+    <circle fill="url(#p)" cx="258.125" cy="54.729" r="40.977"/>
+  </g>
+  <use xlink:href="#c" x="-100.5"/>
+  <use xlink:href="#c" x="-203"/>
+</svg>
