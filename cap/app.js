@@ -1,36 +1,36 @@
 let selectedRibbons = [];
 let selectedRanks = [];
 let selectedBadges = [];
-let selectedArcs = [];
+let selectedTapes = [];
 
-fetch('arcs/_meta.json')
+fetch('tapes/_meta.json')
     .then(response => response.json())
     .then(data => {
-        const arcSelection = document.getElementById('arcSelection');
-        data.forEach(arc => {
+        const tapeSelection = document.getElementById('tapeSelection');
+        data.forEach(tape => {
             const label = document.createElement('label');
             label.classList.add('badge-checkbox');
 
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
-            checkbox.dataset.arc = arc.path;
+            checkbox.dataset.tape = tape.path;
 
             const img = document.createElement('img');
-            img.src = `arcs/${arc.path}`;
-            img.alt = arc.name;
+            img.src = `tapes/${tape.path}`;
+            img.alt = tape.name;
 
-            const text = document.createTextNode(arc.name);
+            const text = document.createTextNode(tape.name);
 
             label.appendChild(checkbox);
             label.appendChild(img);
             label.appendChild(text);
 
-            arcSelection.appendChild(label);
+            tapeSelection.appendChild(label);
         });
 
-        // Update selected arcs when checkboxes are changed
-        const arcCheckboxes = document.querySelectorAll('input[data-arc]');
-        arcCheckboxes.forEach(checkbox => {
+        // Update selected tapes when checkboxes are changed
+        const tapeCheckboxes = document.querySelectorAll('input[data-tape]');
+        tapeCheckboxes.forEach(checkbox => {
             checkbox.addEventListener('change', updateSelectedRibbons);
         });
     });
@@ -154,9 +154,9 @@ fetch('ribbons/_meta.json')
     });
 
 function updateSelectedRibbons() {
-    selectedArcs = Array.from(document.querySelectorAll('input[data-arc]'))
+    selectedTapes = Array.from(document.querySelectorAll('input[data-tape]'))
         .filter(checkbox => checkbox.checked)
-        .map(checkbox => checkbox.dataset.arc);
+        .map(checkbox => checkbox.dataset.tape);
 
     selectedBadges = Array.from(document.querySelectorAll('input[data-badge]'))
         .filter(checkbox => checkbox.checked)
@@ -208,12 +208,12 @@ function updateRack() {
         badgesRow.push(badgeElement);
     });
 
-    selectedArcs.forEach(badge => {
-        const arcElement = document.createElement('img');
-        arcElement.src = `arcs/${badge}`;
-        arcElement.className = 'rack-badge-img';
+    selectedTapes.forEach(badge => {
+        const tapeElement = document.createElement('img');
+        tapeElement.src = `tapes/${badge}`;
+        tapeElement.className = 'rack-badge-img';
 
-        badgesRow.push(arcElement);
+        badgesRow.push(tapeElement);
     });
 
     // Loop through the ribbons in the current row
