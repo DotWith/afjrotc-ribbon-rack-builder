@@ -1,4 +1,6 @@
-# AFJROTC Ribbon Rack Builder
-A simple ribbon rack builder for AFJROTC.
+## What is AFJROTC Ribbon Rack Builder?
+A rack builder for ribbons, badges, ranks, etc.
+Vist the website [here](https://dotwith.github.io/afjrotc-ribbon-rack-builder/).
 
-Most ribbons and ranks are stolen from the [Wikipedia](https://en.m.wikipedia.org/wiki/Junior_Reserve_Officers%27_Training_Corps).
+## Credit!
+Some ribbons are taken from here the [Wikipedia](https://en.m.wikipedia.org/wiki/Junior_Reserve_Officers%27_Training_Corps).
