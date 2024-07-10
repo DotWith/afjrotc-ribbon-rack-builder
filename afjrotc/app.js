@@ -125,18 +125,25 @@ fetch('ribbons/_meta.json')
 
             const text = document.createTextNode(ribbon.id + ". " + ribbon.name);
 
-            const oakNumber = document.createElement('input');
-            oakNumber.classList.add('ribbon-option-input');
-            oakNumber.type = 'range';
-            oakNumber.value = 0;
-            oakNumber.min = 0;
-            oakNumber.max = 25;
-            oakNumber.dataset.ribbon = ribbon.id; // Store ribbon id for easy reference
+            const devices = document.createElement('input');
+            devices.classList.add('ribbon-option-input');
+            devices.type = 'range';
+            devices.value = 0;
+            if (ribbon.uses_stars) {
+                devices.min = 0;
+                devices.max = 3; // none, bronze, silver, golden
+                devices.dataset.uses_stars = true;
+            } else {
+                devices.min = 0;
+                devices.max = 25;
+                devices.dataset.uses_stars = false;
+            }
+            devices.dataset.ribbon = ribbon.id;
 
             label.appendChild(checkbox);
             label.appendChild(img);
             label.appendChild(text);
-            label.appendChild(oakNumber);
+            label.appendChild(devices);
 
             ribbonSelection.appendChild(label);
         });
@@ -170,8 +177,10 @@ function updateSelectedRibbons() {
         .filter(checkbox => checkbox.checked)
         .map(checkbox => {
             const ribbonId = parseInt(checkbox.dataset.ribbon);
-            const oakNumber = parseInt(document.querySelector(`.ribbon-option-input[data-ribbon="${checkbox.dataset.ribbon}"]`).value);
-            return [ribbonId, oakNumber, []];
+            const devicesElement = document.querySelector(`.ribbon-option-input[data-ribbon="${checkbox.dataset.ribbon}"]`);
+            const devices = parseInt(devicesElement.value);
+            const usesStars = devicesElement.dataset.uses_stars === 'true';
+            return [ribbonId, devices, usesStars];
         });
 
     updateRack();
@@ -245,8 +254,8 @@ function updateRack() {
             const oakContainer = document.createElement('div');
             oakContainer.className = 'ribbon-oak';
 
-            if (Array.isArray(ribbon[2]) && ribbon[2].length === 0) {
-                if (ribbon[1] > 0) {
+            if (ribbon[1] > 0) {
+                if (ribbon[2] == false) {
                     const numberOfGoldenOaks = Math.floor(ribbon[1] / 5 / 5);
                     const numberOfSilverOaks = Math.floor((ribbon[1] % 25) / 5);
                     const remainderBronzeOaks = ribbon[1] % 5;
@@ -254,7 +263,7 @@ function updateRack() {
                     // Create golden oak leaves
                     for (let i = 0; i < numberOfGoldenOaks; i++) {
                         const ribbonOak = document.createElement('img');
-                        ribbonOak.src = `ribbons/golden_oak_leaf.svg`;
+                        ribbonOak.src = `ribbons/devices/golden_oak_leaf.svg`;
                         ribbonOak.className = 'ribbon-oak-img';
                         ribbonOak.setAttribute('crossorigin', 'anonymous');
                         oakContainer.appendChild(ribbonOak);
@@ -263,7 +272,7 @@ function updateRack() {
                     // Create silver oak leaves
                     for (let i = 0; i < numberOfSilverOaks; i++) {
                         const ribbonOak = document.createElement('img');
-                        ribbonOak.src = `ribbons/silver_oak_leaf.svg`;
+                        ribbonOak.src = `ribbons/devices/silver_oak_leaf.svg`;
                         ribbonOak.className = 'ribbon-oak-img';
                         ribbonOak.setAttribute('crossorigin', 'anonymous');
                         oakContainer.appendChild(ribbonOak);
@@ -272,18 +281,28 @@ function updateRack() {
                     // Create bronze oak leaves for the remainder
                     for (let i = 0; i < remainderBronzeOaks; i++) {
                         const ribbonOak = document.createElement('img');
-                        ribbonOak.src = `ribbons/bronze_oak_leaf.svg`;
+                        ribbonOak.src = `ribbons/devices/bronze_oak_leaf.svg`;
                         ribbonOak.className = 'ribbon-oak-img';
                         ribbonOak.setAttribute('crossorigin', 'anonymous');
                         oakContainer.appendChild(ribbonOak);
                     }
-                }
-            } else {
-                if (ribbon[1] > 0) {
+                } else {
                     const ribbonOak = document.createElement('img');
-                    ribbonOak.src = `ribbons/` + ribbon[2][ribbon[1]] + `_oak_leaf.svg`;
                     ribbonOak.className = 'ribbon-oak-img';
                     ribbonOak.setAttribute('crossorigin', 'anonymous');
+                    switch (ribbon[1]) {
+                        case 1:
+                            ribbonOak.src = `ribbons/devices/bronze_star.svg`;
+                            break;
+                        case 2:
+                            ribbonOak.src = `ribbons/devices/silver_star.svg`;
+                            break;
+                        case 3:
+                            ribbonOak.src = `ribbons/devices/golden_star.svg`;
+                            break;
+                        default:
+                            break;
+                    }
                     oakContainer.appendChild(ribbonOak);
                 }
             }

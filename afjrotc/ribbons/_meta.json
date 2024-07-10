@@ -217,7 +217,8 @@
     },
     {
         "id": 55,
-        "name": "Health and Wellness Ribbon"
+        "name": "Health and Wellness Ribbon",
+        "uses_stars": true
     },
     {
         "id": 56,
