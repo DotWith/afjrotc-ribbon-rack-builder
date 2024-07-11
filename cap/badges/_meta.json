@@ -1,6 +1,94 @@
 [
     {
-        "path": "model_rocketry_badge.svg",
-        "name": "Model Rocketry Badge"
+        "path": "solo_badge.svg",
+        "name": "Solo Badge"
+    },
+    {
+        "path": "pre_solo_badge.svg",
+        "name": "Pre-Solo Badge"
+    },
+    {
+        "path": "cadet_model_rocketry_badge.svg",
+        "name": "Cadet Model Rocketry Badge"
+    },
+    {
+        "path": "cadet_cyber_badge_basic.svg",
+        "name": "Cadet Cyber Badge (Basic)"
+    },
+    {
+        "path": "cadet_cyber_badge_intermediate.svg",
+        "name": "Cadet Cyber Badge (Intermediate)"
+    },
+    {
+        "path": "cadet_cyber_badge_advance.svg",
+        "name": "Cadet Cyber Badge (Advance)"
+    },
+    {
+        "path": "cadet_stem_badge_basic.svg",
+        "name": "Cadet STEM Badge (Basic)"
+    },
+    {
+        "path": "cadet_stem_badge_intermediate.svg",
+        "name": "Cadet STEM Badge (Intermediate)"
+    },
+    {
+        "path": "cadet_stem_badge_advance.svg",
+        "name": "Cadet STEM Badge (Advance)"
+    },
+    {
+        "path": "nra_badge_basic.svg",
+        "name": "NRA Badge (Basic)"
+    },
+    {
+        "path": "nra_badge_pro.svg",
+        "name": "NRA Badge (Pro-Marksman)"
+    },
+    {
+        "path": "pilot_badge.svg",
+        "name": "Pilot Badge"
+    },
+    {
+        "path": "mission_observer_badge.svg",
+        "name": "Mission Observer Badge"
+    },
+    {
+        "path": "air_crew_badge.svg",
+        "name": "Air Crew Badge"
+    },
+    {
+        "path": "glider_pilot_badge.svg",
+        "name": "Glider Pilot Badge"
+    },
+    {
+        "path": "balloon_pilot_badge.svg",
+        "name": "Balloon Pilot Badge"
+    },
+    {
+        "path": "ground_team_badge_basic_badge.svg",
+        "name": "Ground Team Badge (Basic)"
+    },
+    {
+        "path": "ground_team_badge_senior_badge.svg",
+        "name": "Ground Team Badge (Senior)"
+    },
+    {
+        "path": "ground_team_badge_master_badge.svg",
+        "name": "Ground Team Badge (Master)"
+    },
+    {
+        "path": "communication_badge_technician_badge.svg",
+        "name": "Communication Badge (Technician)"
+    },
+    {
+        "path": "emergency_services_technician_badge.svg",
+        "name": "Emergency Services (Technician)"
+    },
+    {
+        "path": "historian_technician_badge.svg",
+        "name": "Historian (Technician)"
+    },
+    {
+        "path": "information_technology_technician_badge.svg",
+        "name": "Information Technology (Technician)"
     }
 ]
