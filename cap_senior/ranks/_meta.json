@@ -1,0 +1,72 @@
+{
+    "enlisted": [
+        {
+            "id": 5,
+            "name": "Staff Sergeant"
+        },
+        {
+            "id": 6,
+            "name": "Technical Sergeant"
+        },
+        {
+            "id": 7,
+            "name": "Master Sergeant"
+        },
+        {
+            "id": 8,
+            "name": "Senior Master Sergeant"
+        },
+        {
+            "id": 9,
+            "name": "Chief Master Sergeant"
+        }
+    ],
+    "officer_candidate": [
+        {
+            "id": 1,
+            "name": "Flight Officer"
+        },
+        {
+            "id": 2,
+            "name": "Technical Flight Officer"
+        },
+        {
+            "id": 3,
+            "name": "Senior Flight Officer"
+        }
+    ],
+    "officer": [
+        {
+            "id": 1,
+            "name": "Second Lieutenant"
+        },
+        {
+            "id": 2,
+            "name": "First Lieutenant"
+        },
+        {
+            "id": 3,
+            "name": "Captain"
+        },
+        {
+            "id": 4,
+            "name": "Major"
+        },
+        {
+            "id": 5,
+            "name": "Lieutenant Colonel"
+        },
+        {
+            "id": 6,
+            "name": "Colonel"
+        },
+        {
+            "id": 7,
+            "name": "Brigadier General"
+        },
+        {
+            "id": 8,
+            "name": "Major General"
+        }
+    ]
+}

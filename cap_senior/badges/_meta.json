@@ -1,0 +1,50 @@
+[
+    {
+        "path": "pilot_badge.svg",
+        "name": "Pilot Badge"
+    },
+    {
+        "path": "mission_observer_badge.svg",
+        "name": "Mission Observer Badge"
+    },
+    {
+        "path": "air_crew_badge.svg",
+        "name": "Air Crew Badge"
+    },
+    {
+        "path": "glider_pilot_badge.svg",
+        "name": "Glider Pilot Badge"
+    },
+    {
+        "path": "balloon_pilot_badge.svg",
+        "name": "Balloon Pilot Badge"
+    },
+    {
+        "path": "ground_team_badge_basic_badge.svg",
+        "name": "Ground Team Badge (Basic)"
+    },
+    {
+        "path": "ground_team_badge_senior_badge.svg",
+        "name": "Ground Team Badge (Senior)"
+    },
+    {
+        "path": "ground_team_badge_master_badge.svg",
+        "name": "Ground Team Badge (Master)"
+    },
+    {
+        "path": "communication_badge_technician_badge.svg",
+        "name": "Communication Badge (Technician)"
+    },
+    {
+        "path": "emergency_services_technician_badge.svg",
+        "name": "Emergency Services (Technician)"
+    },
+    {
+        "path": "historian_technician_badge.svg",
+        "name": "Historian (Technician)"
+    },
+    {
+        "path": "information_technology_technician_badge.svg",
+        "name": "Information Technology (Technician)"
+    }
+]

@@ -1,0 +1,265 @@
+[
+    {
+        "id": 1,
+        "name": "Air Force Organizational Excellence Award"
+    },
+    {
+        "id": 2,
+        "name": "Silver Medal of Valor"
+    },
+    {
+        "id": 3,
+        "name": "Bronze Medal of Valor"
+    },
+    {
+        "id": 4,
+        "name": "Distinguished Service Award"
+    },
+    {
+        "id": 5,
+        "name": "Exceptional Service Award"
+    },
+    {
+        "id": 6,
+        "name": "Meritorious Service Award"
+    },
+    {
+        "id": 7,
+        "name": "Commander's Commendation Award"
+    },
+    {
+        "id": 8,
+        "name": "CAP Achievement Award"
+    },
+    {
+        "id": 9,
+        "name": "Certificate of Recognition for Lifesaving"
+    },
+    {
+        "id": 10,
+        "name": "National Commander's Unit Citation Award"
+    },
+    {
+        "id": 11,
+        "name": "Unit Citation Award"
+    },
+    {
+        "id": 12,
+        "name": "National Commander's Citation"
+    },
+    {
+        "id": 13,
+        "name": "Gill Robb Wilson Award",
+        "uses_stars": true
+    },
+    {
+        "id": 14,
+        "name": "Paul E. Garber Award",
+        "uses_stars": true
+    },
+    {
+        "id": 15,
+        "name": "Grover Loening Aerospace Award"
+    },
+    {
+        "id": 16,
+        "name": "Leadership Award",
+        "uses_stars": true
+    },
+    {
+        "id": 17,
+        "name": "CAP Membership Award"
+    },
+    {
+        "id": 18,
+        "name": "A. Scott Crossfield Award"
+    },
+    {
+        "id": 19,
+        "name": "Brigadier General Charles E. “Chuck” Yeager Aerospace Education Achievement Award"
+    },
+    {
+        "id": 20,
+        "name": "Gen J.F. Curry Achievement",
+        "uses_stars": true
+    },
+    {
+        "id": 21,
+        "name": "Gen Hap Arnold Achievement",
+        "uses_stars": true
+    },
+    {
+        "id": 22,
+        "name": "Mary Feik Achievement",
+        "uses_stars": true
+    },
+    {
+        "id": 23,
+        "name": "Wright Brothers Award"
+    },
+    {
+        "id": 24,
+        "name": "Capt Eddie Rickenbacker Achievement",
+        "uses_stars": true
+    },
+    {
+        "id": 25,
+        "name": "Achievement 6",
+        "uses_stars": true
+    },
+    {
+        "id": 26,
+        "name": "Gen Jimmy F. Doolittle Achievement",
+        "uses_stars": true
+    },
+    {
+        "id": 27,
+        "name": "Dr. Robert H. Goddard Achievement",
+        "uses_stars": true
+    },
+    {
+        "id": 28,
+        "name": "Neil Armstrong Achievement",
+        "uses_stars": true
+    },
+    {
+        "id": 29,
+        "name": "Gen Billy Mitchell Award",
+        "uses_stars": true
+    },
+    {
+        "id": 30,
+        "name": "Amelia Earhart Award w/Clasp & COS Star",
+        "uses_stars": true
+    },
+    {
+        "id": 31,
+        "name": "Ira C. Eaker Award",
+        "uses_stars": true
+    },
+    {
+        "id": 32,
+        "name": "Gen Carl A. Spaatz Award",
+        "uses_stars": true
+    },
+    {
+        "id": 33,
+        "name": "Frank Borman Falcon Award"
+    },
+    {
+        "id": 34,
+        "name": "Red Achievement"
+    },
+    {
+        "id": 35,
+        "name": "White Achievement"
+    },
+    {
+        "id": 36,
+        "name": "Blue Achievement"
+    },
+    {
+        "id": 37,
+        "name": "Cadet Certificate Of Proficiency"
+    },
+    {
+        "id": 38,
+        "name": "Command Service Ribbon"
+    },
+    {
+        "id": 39,
+        "name": "CAP Crisis Service Ribbon"
+    },
+    {
+        "id": 40,
+        "name": "Red Service Ribbon"
+    },
+    {
+        "id": 41,
+        "name": "Search “Find” Ribbon"
+    },
+    {
+        "id": 42,
+        "name": "Air Search and Rescue Ribbon"
+    },
+    {
+        "id": 43,
+        "name": "Counterdrug Ribbon"
+    },
+    {
+        "id": 44,
+        "name": "Disaster Relief Ribbon"
+    },
+    {
+        "id": 45,
+        "name": "Homeland Security Ribbon"
+    },
+    {
+        "id": 46,
+        "name": "Cadet Orientation Pilot Ribbon"
+    },
+    {
+        "id": 47,
+        "name": "Community Service Ribbon"
+    },
+    {
+        "id": 48,
+        "name": "International Air Cadet Exchange"
+    },
+    {
+        "id": 49,
+        "name": "National Cadet Competition Ribbon"
+    },
+    {
+        "id": 50,
+        "name": "National Color Guard Competition Ribbon"
+    },
+    {
+        "id": 51,
+        "name": "Cadet Advisory Council Ribbon"
+    },
+    {
+        "id": 52,
+        "name": "Cadet Special Activity Ribbon"
+    },
+    {
+        "id": 53,
+        "name": "Encampment Ribbon"
+    },
+    {
+        "id": 54,
+        "name": "Senior Recruiter Ribbon"
+    },
+    {
+        "id": 55,
+        "name": "Air Medal"
+    },
+    {
+        "id": 56,
+        "name": "Wartime Service Ribbon"
+    },
+    {
+        "id": 57,
+        "name": "Anti-Submarine Coastal Patrol Ribbon"
+    },
+    {
+        "id": 58,
+        "name": "Southern Liaison Patrol Ribbon"
+    },
+    {
+        "id": 59,
+        "name": "Tow-Target & Tracking Ribbon"
+    },
+    {
+        "id": 60,
+        "name": "Courier Ribbon"
+    },
+    {
+        "id": 61,
+        "name": "Forest Patrol Ribbon"
+    },
+    {
+        "id": 62,
+        "name": "Missing Aircraft Ribbon"
+    }
+]
