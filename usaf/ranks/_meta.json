@@ -1,0 +1,33 @@
+{
+    "enlisted": [
+        { "id": "1", "name": "Airman Basic" },
+        { "id": "2", "name": "Airman" },
+        { "id": "3", "name": "Airman First Class" },
+        { "id": "4", "name": "Senior Airman" },
+        { "id": "5", "name": "Staff Sergeant" },
+        { "id": "6", "name": "Technical Sergeant" },
+        { "id": "7A", "name": "Master Sergeant" },
+        { "id": "7B", "name": "Master Sergeant" },
+        { "id": "8A", "name": "Senior Master Sergeant" },
+        { "id": "8B", "name": "Senior Master Sergeant" },
+        { "id": "9A", "name": "Chief Master Sergeant" },
+        { "id": "9B", "name": "Chief Master Sergeant" },
+        { "id": "9C", "name": "Command Chief Master Sergeant" },
+        { "id": "9D", "name": "Senior Enlisted Advisor to the Chief of the National Guard Bureau" },
+        { "id": "9E", "name": "Chief Master Sergeant of the Air Force" },
+        { "id": "9F", "name": "Senior Enlisted Advisor to the Chairman" }
+    ],
+    "officer": [
+        { "id": "1", "name": "Second Lieutenant" },
+        { "id": "2", "name": "First Lieutenant" },
+        { "id": "3", "name": "Captain" },
+        { "id": "4", "name": "Major" },
+        { "id": "5", "name": "Lieutenant Colonel" },
+        { "id": "6", "name": "Colonel" },
+        { "id": "7", "name": "Brigadier General" },
+        { "id": "8", "name": "Major General" },
+        { "id": "9", "name": "Lieutenant General" },
+        { "id": "10", "name": "General" },
+        { "id": "11", "name": "General of the Air Force" }
+    ]
+}

@@ -1,85 +1,106 @@
 [
     {
+        "id": 1,
         "path": "orienteering_arc.svg",
         "name": "Orienteering Arc"
     },
     {
+        "id": 2,
         "path": "raider_arc.svg",
         "name": "Raider Arc"
     },
     {
+        "id": 3,
         "path": "drill_team_arc.svg",
         "name": "Drill Team Arc"
     },
     {
+        "id": 4,
         "path": "staff_arc.svg",
         "name": "Staff Arc"
     },
     {
+        "id": 5,
         "path": "color_guard_arc.svg",
         "name": "Color Guard Arc"
     },
     {
+        "id": 6,
         "path": "flag_detail_arc.svg",
         "name": "Flag Detail Arc"
     },
     {
+        "id": 7,
         "path": "parade_arc.svg",
         "name": "Parade Arc"
     },
     {
+        "id": 8,
         "path": "honor_guard_arc.svg",
         "name": "Honor Guard Arc"
     },
     {
+        "id": 9,
         "path": "rifle_team_arc.svg",
         "name": "Rifle Team Arc"
     },
     {
+        "id": 10,
         "path": "community_service_arc.svg",
         "name": "Community Service Arc"
     },
     {
+        "id": 11,
         "path": "sabre_guard_arc.svg",
         "name": "Sabre Guard Arc"
     },
     {
+        "id": 12,
         "path": "academics_arc.svg",
         "name": "Academics Arc"
     },
     {
+        "id": 13,
         "path": "cyberpatriot_arc.svg",
         "name": "Cyberpatriot Arc"
     },
     {
+        "id": 14,
         "path": "rappelling_arc.svg",
         "name": "Rappelling Arc"
     },
     {
+        "id": 15,
         "path": "summer_camp_arc.svg",
         "name": "Summer Camp Arc"
     },
     {
+        "id": 16,
         "path": "cadet_challenge_arc.svg",
         "name": "Cadet Challenge Arc"
     },
     {
+        "id": 17,
         "path": "jclc_arc.svg",
         "name": "JCLC Arc"
     },
     {
+        "id": 18,
         "path": "jlab_arc.svg",
         "name": "JLAB Arc"
     },
     {
+        "id": 19,
         "path": "honor_roll_arc.svg",
         "name": "Honor Roll Arc"
     },
     {
+        "id": 20,
         "path": "leadership_arc.svg",
         "name": "Leadership Arc"
     },
     {
+        "id": 21,
         "path": "pt_team_arc.svg",
         "name": "P.T. Team Arc"
     }

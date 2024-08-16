@@ -1,0 +1,366 @@
+[
+    {
+        "id": 1,
+        "name": "Medal of Honor"
+    },
+    {
+        "id": 2,
+        "name": "Air Force Cross"
+    },
+    {
+        "id": 3,
+        "name": "Defense Distinguished Service Medal"
+    },
+    {
+        "id": 4,
+        "name": "Distinguished Service Medal"
+    },
+    {
+        "id": 5,
+        "name": "Silver Star"
+    },
+    {
+        "id": 6,
+        "name": "Defense Superior Service Medal"
+    },
+    {
+        "id": 7,
+        "name": "Legion of Merit"
+    },
+    {
+        "id": 8,
+        "name": "Distinguished Flying Cross"
+    },
+    {
+        "id": 9,
+        "name": "Airman's Medal"
+    },
+    {
+        "id": 10,
+        "name": "Bronze Star"
+    },
+    {
+        "id": 11,
+        "name": "Purple Heart"
+    },
+    {
+        "id": 12,
+        "name": "Defense Meritorious Service Medal"
+    },
+    {
+        "id": 13,
+        "name": "Meritorious Service Medal"
+    },
+    {
+        "id": 14,
+        "name": "Air Medal"
+    },
+    {
+        "id": 15,
+        "name": "Aerial Achievement Medal"
+    },
+    {
+        "id": 16,
+        "name": "Joint Service Commedation Medal"
+    },
+    {
+        "id": 17,
+        "name": "Air Force Commendation Medal"
+    },
+    {
+        "id": 18,
+        "name": "Joint Service Achievement Medal"
+    },
+    {
+        "id": 19,
+        "name": "Air Force Achievement Medal"
+    },
+    {
+        "id": 20,
+        "name": "Air Force Combat Action Medal"
+    },
+    {
+        "id": 21,
+        "name": "Presidential Unit Citation"
+    },
+    {
+        "id": 22,
+        "name": "Joint Meritorious Unit Award"
+    },
+    {
+        "id": 23,
+        "name": "Gallant Unit Citation"
+    },
+    {
+        "id": 24,
+        "name": "Meritorious Unit Award"
+    },
+    {
+        "id": 25,
+        "name": "Air and Space Outstanding Unit Award"
+    },
+    {
+        "id": 26,
+        "name": "Air and Space Organizational Excellence Award"
+    },
+    {
+        "id": 27,
+        "name": "Prisoner of War Medal"
+    },
+    {
+        "id": 28,
+        "name": "Combat Readiness Medal"
+    },
+    {
+        "id": 29,
+        "name": "Air Force Good Conduct Medal"
+    },
+    {
+        "id": 30,
+        "name": "Army Good Conduct Medal"
+    },
+    {
+        "id": 31,
+        "name": "Air Reserve Forces Meritorious Service Medal"
+    },
+    {
+        "id": 32,
+        "name": "Outstanding Airman of the Year Ribbon"
+    },
+    {
+        "id": 33,
+        "name": "Air and Space Recognition Ribbon"
+    },
+    {
+        "id": 34,
+        "name": "American Defense Service Medal"
+    },
+    {
+        "id": 35,
+        "name": "American Campaign Medal"
+    },
+    {
+        "id": 36,
+        "name": "Asiatic-Pacific Campaign Medal"
+    },
+    {
+        "id": 37,
+        "name": "Euro-African-Middle Eastern Campaign Medal"
+    },
+    {
+        "id": 38,
+        "name": "World War II Victory Medal"
+    },
+    {
+        "id": 39,
+        "name": "Army of Occupation Medal"
+    },
+    {
+        "id": 40,
+        "name": "Medal for Humane Action"
+    },
+    {
+        "id": 41,
+        "name": "National Defense Service Medal"
+    },
+    {
+        "id": 42,
+        "name": "Korean Service Medal"
+    },
+    {
+        "id": 43,
+        "name": "U.S. Space Force Good Conduct Medal"
+    },
+    {
+        "id": 44,
+        "name": "Antarctica Service Medal"
+    },
+    {
+        "id": 45,
+        "name": "Armed Forces Expeditionary Medal"
+    },
+    {
+        "id": 46,
+        "name": "Vietnam Service Medal"
+    },
+    {
+        "id": 47,
+        "name": "Southwest Asia Service Medal"
+    },
+    {
+        "id": 48,
+        "name": "Kosovo Campaign Medal"
+    },
+    {
+        "id": 49,
+        "name": "Afghanistan Campaign Medal"
+    },
+    {
+        "id": 50,
+        "name": "Iraq Campaign Medal"
+    },
+    {
+        "id": 51,
+        "name": "Inherent Resolve Campaign Medal"
+    },
+    {
+        "id": 52,
+        "name": "Global War on Terrorism Expeditionary Medal"
+    },
+    {
+        "id": 53,
+        "name": "Global War on Terrorism Service Medal"
+    },
+    {
+        "id": 54,
+        "name": "Korean Defense Service Medal"
+    },
+    {
+        "id": 55,
+        "name": "Armed Forces Service Medal"
+    },
+    {
+        "id": 56,
+        "name": "Humanitarian Service Medal"
+    },
+    {
+        "id": 57,
+        "name": "Military Outstanding Volunteer Service Medal"
+    },
+    {
+        "id": 58,
+        "name": "Remote Combat Effects Campaign Medal"
+    },
+    {
+        "id": 59,
+        "name": "Air and Space Campaign Medal"
+    },
+    {
+        "id": 60,
+        "name": "Nuclear Deterrence Operations Service Medal"
+    },
+    {
+        "id": 61,
+        "name": "Air and Space Overseas Ribbon - Short Tour"
+    },
+    {
+        "id": 62,
+        "name": "Air and Space Overseas Ribbon -  Long Tour"
+    },
+    {
+        "id": 63,
+        "name": "Air and Space Expeditionary Service Ribbon"
+    },
+    {
+        "id": 64,
+        "name": "Air and Space Longevity Service Award"
+    },
+    {
+        "id": 65,
+        "name": "Developmental Special Duty Ribbon"
+    },
+    {
+        "id": 66,
+        "name": "Air Force Basic Military Training Instructor Ribbon"
+    },
+    {
+        "id": 67,
+        "name": "Air Force Recruiter Ribbon"
+    },
+    {
+        "id": 68,
+        "name": "Armed Forces Reserve Medal"
+    },
+    {
+        "id": 69,
+        "name": "USAF NCO PME Graduate Ribbon"
+    },
+    {
+        "id": 70,
+        "name": "Basic Military Training Honor Graduate Ribbon"
+    },
+    {
+        "id": 71,
+        "name": "Small Arms Expert Marksmanship Ribbon"
+    },
+    {
+        "id": 72,
+        "name": "Air and Space Training Ribbon"
+    },
+    {
+        "id": 73,
+        "name": "Philippine Defense Medal"
+    },
+    {
+        "id": 74,
+        "name": "Philippine Liberation Medal"
+    },
+    {
+        "id": 75,
+        "name": "Philippine Independence Medal"
+    },
+    {
+        "id": 76,
+        "name": "Philippine Presidential Unit Citation"
+    },
+    {
+        "id": 77,
+        "name": "Republic of Korea Presidential Unit Citation"
+    },
+    {
+        "id": 78,
+        "name": "RVN Gallantry Cross with Palm"
+    },
+    {
+        "id": 79,
+        "name": "United Nations Service Medal"
+    },
+    {
+        "id": 80,
+        "name": "United Nations Medal"
+    },
+    {
+        "id": 81,
+        "name": "NATO Meritorious Service Medal"
+    },
+    {
+        "id": 82,
+        "name": "NATO Medal for Yugoslavia"
+    },
+    {
+        "id": 83,
+        "name": "NATO Medal for Kosovo"
+    },
+    {
+        "id": 84,
+        "name": "Article 5 NATO Medal - Eagle Assist"
+    },
+    {
+        "id": 85,
+        "name": "Article 5 NATO Medal - Active Endeavour"
+    },
+    {
+        "id": 86,
+        "name": "Non Article 5 NATO Medal - Balkans"
+    },
+    {
+        "id": 86,
+        "name": "Non Article 5 NATO Medal - International Security Assistance Force"
+    },
+    {
+        "id": 87,
+        "name": "Republic of Vietnam Campaign Medal"
+    },
+    {
+        "id": 88,
+        "name": "Kuwait Liberation Medal Kingdom of Saudi Arabia"
+    },
+    {
+        "id": 89,
+        "name": "Kuwait Liberation Medal Government of Kuwait"
+    },
+    {
+        "id": 90,
+        "name": "Republic of Korea Korean War Service Medal"
+    }
+]

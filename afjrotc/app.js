@@ -1,19 +1,32 @@
-let selectedRibbons = [];
-let selectedRanks = [];
-let selectedBadges = [];
 let selectedArcs = [];
+let selectedBadges = [];
+let selectedRanks = [];
+let selectedRibbons = [];
 
+let arcsMeta = {};
+let ranksMeta = {};
+let badgesMeta = {};
+let ribbonsMeta = {};
+
+document.addEventListener('DOMContentLoaded', () => {
+    restoreStateFromURL();  // Restore the state when the page loads
+});
+
+// Fetching and populating arcs
 fetch('arcs/_meta.json')
     .then(response => response.json())
     .then(data => {
         const arcSelection = document.getElementById('arcSelection');
         data.forEach(arc => {
+            arcsMeta[arc.id] = arc.path;
+
             const label = document.createElement('label');
             label.classList.add('badge-checkbox');
 
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
-            checkbox.dataset.arc = arc.path;
+            //checkbox.dataset.arc = arc.path;
+            checkbox.dataset.arc = arc.id;
 
             const img = document.createElement('img');
             img.src = `arcs/${arc.path}`;
@@ -28,24 +41,32 @@ fetch('arcs/_meta.json')
             arcSelection.appendChild(label);
         });
 
-        // Update selected arcs when checkboxes are changed
         const arcCheckboxes = document.querySelectorAll('input[data-arc]');
         arcCheckboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', updateSelectedRibbons);
+            checkbox.addEventListener('change', () => {
+                updateSelectedRibbons();
+                updateURL();
+            });
         });
+
+        restoreStateFromURL(); // Restore the state after rendering
     });
 
+// Fetching and populating badges
 fetch('badges/_meta.json')
     .then(response => response.json())
     .then(data => {
         const badgeSelection = document.getElementById('badgeSelection');
         data.forEach(badge => {
+            badgesMeta[badge.id] = badge.path;
+
             const label = document.createElement('label');
             label.classList.add('badge-checkbox');
 
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
-            checkbox.dataset.badge = badge.path;
+            //checkbox.dataset.badge = badge.path;
+            checkbox.dataset.badge = badge.id;
 
             const img = document.createElement('img');
             img.src = `badges/${badge.path}`;
@@ -60,23 +81,31 @@ fetch('badges/_meta.json')
             badgeSelection.appendChild(label);
         });
 
-        // Update selected badges when checkboxes are changed
         const badgeCheckboxes = document.querySelectorAll('input[data-badge]');
         badgeCheckboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', updateSelectedRibbons);
+            checkbox.addEventListener('change', () => {
+                updateSelectedRibbons();
+                updateURL();
+            });
         });
+
+        restoreStateFromURL(); // Restore the state after rendering
     });
 
+// Fetching and populating ranks
 fetch('ranks/_meta.json')
     .then(response => response.json())
     .then(data => {
         function makeRanks(data, kind, rankSelection) {
             data[kind].forEach(rank => {
+                ranksMeta[rank.id] = `${kind}/${rank.id}`;
+
                 const label = document.createElement('label');
                 label.classList.add('rank-radio');
 
                 const radio = document.createElement('input');
-                radio.dataset.rank = `${kind}/${rank.id}`;
+                //radio.dataset.rank = `${kind}/${rank.id}`;
+                radio.dataset.rank = rank.id;
                 radio.type = 'radio';
                 radio.name = 'rank';
                 radio.value = rank.id;
@@ -100,18 +129,25 @@ fetch('ranks/_meta.json')
         makeRanks(data, 'enlisted', rankSelection);
         makeRanks(data, 'officer', rankSelection);
 
-        // Update selected ranks when radios are changed
         const ranksRadios = document.querySelectorAll('input[data-rank]');
         ranksRadios.forEach(radio => {
-            radio.addEventListener('change', updateSelectedRibbons);
+            radio.addEventListener('change', () => {
+                updateSelectedRibbons();
+                updateURL();
+            });
         });
+
+        restoreStateFromURL(); // Restore the state after rendering
     });
 
+// Fetching and populating ribbons
 fetch('ribbons/_meta.json')
     .then(response => response.json())
     .then(data => {
         const ribbonSelection = document.getElementById('ribbonSelection');
         data.forEach(ribbon => {
+            ribbonsMeta[ribbon.id] = ribbon.uses_stars;
+
             const label = document.createElement('label');
             label.classList.add('ribbon-option');
 
@@ -132,11 +168,11 @@ fetch('ribbons/_meta.json')
             if (ribbon.uses_stars) {
                 devices.min = 0;
                 devices.max = 3; // none, bronze, silver, golden
-                devices.dataset.uses_stars = true;
+                //devices.dataset.uses_stars = true;
             } else {
                 devices.min = 0;
                 devices.max = 25;
-                devices.dataset.uses_stars = false;
+                //devices.dataset.uses_stars = false;
             }
             devices.dataset.ribbon = ribbon.id;
 
@@ -148,30 +184,37 @@ fetch('ribbons/_meta.json')
             ribbonSelection.appendChild(label);
         });
 
-        // Update selected ribbons when checkboxes are changed
         const ribbonCheckboxes = document.querySelectorAll('input[data-ribbon]');
         ribbonCheckboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', updateSelectedRibbons);
+            checkbox.addEventListener('change', () => {
+                updateSelectedRibbons();
+                updateURL();
+            });
         });
 
         const oakNumberInputs = document.querySelectorAll('.ribbon-option-input');
         oakNumberInputs.forEach(input => {
-            input.addEventListener('input', updateSelectedRibbons);
+            input.addEventListener('input', () => {
+                updateSelectedRibbons();
+                updateURL();
+            });
         });
+
+        restoreStateFromURL(); // Restore the state after rendering
     });
 
 function updateSelectedRibbons() {
     selectedArcs = Array.from(document.querySelectorAll('input[data-arc]'))
         .filter(checkbox => checkbox.checked)
-        .map(checkbox => checkbox.dataset.arc);
+        .map(checkbox => parseInt(checkbox.dataset.arc));
 
     selectedBadges = Array.from(document.querySelectorAll('input[data-badge]'))
         .filter(checkbox => checkbox.checked)
-        .map(checkbox => checkbox.dataset.badge);
+        .map(checkbox => parseInt(checkbox.dataset.badge));
 
     selectedRanks = Array.from(document.querySelectorAll('input[data-rank]'))
         .filter(radio => radio.checked)
-        .map(radio => radio.dataset.rank);
+        .map(radio => parseInt(radio.dataset.rank));
 
     selectedRibbons = Array.from(document.querySelectorAll('input[data-ribbon]'))
         .filter(checkbox => checkbox.checked)
@@ -179,11 +222,77 @@ function updateSelectedRibbons() {
             const ribbonId = parseInt(checkbox.dataset.ribbon);
             const devicesElement = document.querySelector(`.ribbon-option-input[data-ribbon="${checkbox.dataset.ribbon}"]`);
             const devices = parseInt(devicesElement.value);
-            const usesStars = devicesElement.dataset.uses_stars === 'true';
-            return [ribbonId, devices, usesStars];
+            //const usesStars = devicesElement.dataset.uses_stars === 'true';
+            return [ribbonId, devices];
         });
 
     updateRack();
+}
+
+function updateURL() {
+    const params = new URLSearchParams();
+
+    // Add arcs, badges, ranks, and ribbons to the URL
+    if (selectedArcs.length > 0) params.set('arcs', selectedArcs.join(','));
+    if (selectedBadges.length > 0) params.set('badges', selectedBadges.join(','));
+    if (selectedRanks.length > 0) params.set('ranks', selectedRanks.join(','));
+    if (selectedRibbons.length > 0) {
+        const ribbonsParam = selectedRibbons.map(ribbon => `${ribbon[0]}-${ribbon[1]}`).join(',');
+        params.set('ribbons', ribbonsParam);
+    }
+
+    // Update the URL
+    window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
+}
+
+function restoreStateFromURL() {
+    const params = new URLSearchParams(window.location.search);
+
+    // Restore arcs
+    const arcs = params.get('arcs');
+    if (arcs) {
+        arcs.split(',').forEach(arc => {
+            const checkbox = document.querySelector(`input[data-arc="${arc}"]`);
+            if (checkbox) checkbox.checked = true;
+        });
+    }
+
+    // Restore badges
+    const badges = params.get('badges');
+    if (badges) {
+        badges.split(',').forEach(badge => {
+            const checkbox = document.querySelector(`input[data-badge="${badge}"]`);
+            if (checkbox) checkbox.checked = true;
+        });
+    }
+
+    // Restore ranks
+    const ranks = params.get('ranks');
+    if (ranks) {
+        ranks.split(',').forEach(rank => {
+            const radio = document.querySelector(`input[data-rank="${rank}"]`);
+            if (radio) radio.checked = true;
+        });
+    }
+
+    // Restore ribbons
+    const ribbons = params.get('ribbons');
+    if (ribbons) {
+        ribbons.split(',').forEach(ribbon => {
+            const [ribbonId, devices, usesStars] = ribbon.split('-');
+            const checkbox = document.querySelector(`input[data-ribbon="${ribbonId}"]`);
+            if (checkbox) checkbox.checked = true;
+
+            const devicesElement = document.querySelector(`.ribbon-option-input[data-ribbon="${ribbonId}"]`);
+            if (devicesElement) {
+                devicesElement.value = devices;
+                ///devicesElement.dataset.uses_stars = usesStars === 'true';
+            }
+        });
+    }
+
+    // Update the selected ribbons after restoring the state
+    updateSelectedRibbons();
 }
 
 function updateRack() {
@@ -197,35 +306,53 @@ function updateRack() {
 
     const badgesRow = [];
 
-    selectedRanks.forEach(rank => {
-        if (rank == "enlisted/1") {
-            return;
-        }
-
+    selectedRanks.forEach(rankId => {
         const rankElement = document.createElement('img');
-        rankElement.src = `ranks/${rank}.svg`;
-        rankElement.className = 'rack-badge-img';
-        rankElement.setAttribute('crossorigin', 'anonymous');
+        const rankPath = ranksMeta[rankId]; // Use the lookup to get the path
 
-        badgesRow.push(rankElement);
+        if (rankPath == "enlisted/1") {
+            return;
+        } // TODO: Fix
+
+        if (rankPath) {
+            rankElement.src = `ranks/${rankPath}.svg`;
+            rankElement.className = 'rack-badge-img';
+            rankElement.setAttribute('crossorigin', 'anonymous');
+
+            badgesRow.push(rankElement);
+        } else {
+            console.error(`Rank with ID ${rankId} not found in meta data.`);
+        }
     });
 
-    selectedBadges.forEach(badge => {
+    selectedBadges.forEach(badgeId => {
         const badgeElement = document.createElement('img');
-        badgeElement.src = `badges/${badge}`;
-        badgeElement.className = 'rack-badge-img';
-        badgeElement.setAttribute('crossorigin', 'anonymous');
+        const badgePath = badgesMeta[badgeId]; // Use the lookup to get the path
 
-        badgesRow.push(badgeElement);
+        if (badgePath) {
+            badgeElement.src = `badges/${badgePath}`;
+            badgeElement.className = 'rack-badge-img';
+            badgeElement.setAttribute('crossorigin', 'anonymous');
+
+            badgesRow.push(badgeElement);
+        } else {
+            console.error(`Badge with ID ${badgeId} not found in meta data.`);
+        }
     });
 
-    selectedArcs.forEach(badge => {
+    selectedArcs.forEach(arcId => {
         const arcElement = document.createElement('img');
-        arcElement.src = `arcs/${badge}`;
-        arcElement.className = 'rack-badge-img';
-        arcElement.setAttribute('crossorigin', 'anonymous');
+        const arcPath = arcsMeta[arcId]; // Use the lookup to get the path
 
-        badgesRow.push(arcElement);
+        if (arcPath) {
+            arcElement.src = `arcs/${arcPath}`;
+            arcElement.className = 'rack-badge-img';
+            arcElement.setAttribute('crossorigin', 'anonymous');
+
+            badgesRow.push(arcElement);
+        } else {
+            console.error(`Arc with ID ${arcId} not found in meta data.`);
+        }
     });
 
     // Loop through the ribbons in the current row
@@ -241,6 +368,8 @@ function updateRack() {
 
         // Loop through the ribbons in the current row
         row.forEach(ribbon => {
+            const uses_stars = ribbonsMeta[ribbon[0]]; // Use the lookup to get the path
+
             const ribbonContainer = document.createElement('div');
             ribbonContainer.className = 'rack-ribbon';
 
@@ -255,7 +384,7 @@ function updateRack() {
             oakContainer.className = 'ribbon-oak';
 
             if (ribbon[1] > 0) {
-                if (ribbon[2] == false) {
+                if (!uses_stars) {
                     const numberOfGoldenOaks = Math.floor(ribbon[1] / 5 / 5);
                     const numberOfSilverOaks = Math.floor((ribbon[1] % 25) / 5);
                     const remainderBronzeOaks = ribbon[1] % 5;
@@ -349,6 +478,42 @@ function sortRibbons(ribbons) {
     }
 
     return rows;
+}
+
+function resetSelections() {
+    // Reset arcs
+    const arcCheckboxes = document.querySelectorAll('input[data-arc]');
+    arcCheckboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
+
+    // Reset badges
+    const badgeCheckboxes = document.querySelectorAll('input[data-badge]');
+    badgeCheckboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
+
+    // Reset ranks
+    const rankRadios = document.querySelectorAll('input[data-rank]');
+    rankRadios.forEach(radio => {
+        radio.checked = false;
+    });
+
+    // Reset ribbons
+    const ribbonCheckboxes = document.querySelectorAll('input[data-ribbon]');
+    ribbonCheckboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
+
+    // Reset ribbon device sliders
+    const oakNumberInputs = document.querySelectorAll('.ribbon-option-input');
+    oakNumberInputs.forEach(input => {
+        input.value = 0;
+    });
+
+    // Update the selections and URL after resetting
+    updateSelectedRibbons();
+    updateURL();
 }
 
 function saveRackPng() {
