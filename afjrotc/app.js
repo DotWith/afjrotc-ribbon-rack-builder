@@ -96,16 +96,17 @@ fetch('badges/_meta.json')
 fetch('ranks/_meta.json')
     .then(response => response.json())
     .then(data => {
+        var index = 0;
         function makeRanks(data, kind, rankSelection) {
             data[kind].forEach(rank => {
-                ranksMeta[rank.id] = `${kind}/${rank.id}`;
+                ranksMeta[index] = `${kind}/${rank.id}`;
 
                 const label = document.createElement('label');
                 label.classList.add('rank-radio');
 
                 const radio = document.createElement('input');
                 //radio.dataset.rank = `${kind}/${rank.id}`;
-                radio.dataset.rank = rank.id;
+                radio.dataset.rank = index;
                 radio.type = 'radio';
                 radio.name = 'rank';
                 radio.value = rank.id;
@@ -122,6 +123,8 @@ fetch('ranks/_meta.json')
                 label.appendChild(text);
 
                 rankSelection.appendChild(label);
+
+                index++;
             });
         }
 
