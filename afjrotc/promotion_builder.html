@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFJROTC Promotion Builder</title>
+    <style>
+        body {
+            font-family: FFDINWeb, Arial, sans-serif;
+            color: #0e172d;
+        }
+        .promotion-container {
+            width: 500px;
+            margin: 20px auto;
+        }
+        .promotion-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .promotion-item img {
+            width: 30px;
+            height: 30px;
+            margin-left: auto;
+            object-fit: contain;
+        }
+        .promotion-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .promotion-text span {
+            font-family: Stratum, Arial, sans-serif;
+            margin: 2px 0;
+        }
+        .rank {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .form-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container select, .form-container input {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .form-container button {
+            padding: 10px;
+            background-color: #555;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<form action="./app.html">
+    <button>Back</button>
+</form>
+
+<div class="promotion-container">
+    <h2>EFFECTIVE DATES OF PROMOTION</h2>
+</div>
+
+<button class="save-button" onclick="saveRackPng()">Save Rack as .png</button>
+
+<!-- Form to add new promotion -->
+<div class="form-container">
+    <select id="rank" required>
+        <option value="" disabled selected>Select Rank</option>
+    </select>
+    <input type="date" id="date" required>
+    <button id="addButton">Add Promotion</button>
+</div>
+
+<script src="https://github.com/yorickshan/html2canvas-pro/releases/download/v1.5.0/html2canvas-pro.min.js"></script>
+<script>
+    let ranksMeta = {};
+    const rankSelect = document.getElementById('rank'); // Reference to the dropdown
+
+    fetch('ranks/_meta.json')
+        .then(response => response.json())
+        .then(data => {
+            let index = 0;
+
+            function populateRanks(data, kind) {
+                data[kind].forEach(rank => {
+                    ranksMeta[index] = `${kind}/${rank.id}`;
+                    
+                    if (rank.id != 1 || kind != "enlisted") {
+                        // Create a new option element and add it to the dropdown
+                        const option = document.createElement('option');
+                        option.value = index;
+                        option.textContent = `${rank.name}`;
+                        rankSelect.appendChild(option);
+                    }
+                    
+                    index++;
+                });
+            }
+
+            // Populate ranks from both enlisted and officer categories
+            populateRanks(data, 'enlisted');
+            populateRanks(data, 'officer');
+        });
+
+    // Select the promotion container
+    const promotionContainer = document.querySelector('.promotion-container');
+
+    // Function to create promotion items
+    function createPromotionItem(rank, date) {
+        const rankPath = ranksMeta[rank]; // Automatically get the image from the ranksMeta object
+
+        // Create the main div for a promotion item
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('promotion-item');
+
+        // Create the promotion text div
+        const textDiv = document.createElement('div');
+        textDiv.classList.add('promotion-text');
+
+        // Add rank and date spans
+        const rankSpan = document.createElement('span');
+        rankSpan.classList.add('rank');
+        rankSpan.textContent = rankSelect.options[rankSelect.selectedIndex].textContent; // Use the selected rank name
+        
+        // Format the date to "Month Day, Year"
+        const formattedDate = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        const dateSpan = document.createElement('span');
+        dateSpan.textContent = formattedDate; // Set the formatted date
+
+        textDiv.appendChild(rankSpan);
+        textDiv.appendChild(dateSpan);
+
+        // Create the image element
+        const img = document.createElement('img');
+        img.src = `ranks/${rankPath}.svg`; // Use the rank path from ranksMeta
+        img.alt = rankSelect.options[rankSelect.selectedIndex].textContent; // Set the alt text to the rank name
+
+        // Append text and image to the item div
+        itemDiv.appendChild(textDiv);
+        itemDiv.appendChild(img);
+
+        // Append the item div to the container
+        promotionContainer.appendChild(itemDiv);
+    }
+
+    // Function to handle the Add button click
+    document.getElementById('addButton').addEventListener('click', function () {
+        const rank = parseInt(document.getElementById('rank').value);
+        const date = document.getElementById('date').value;
+
+        // Validate inputs
+        if (rank && date) {
+            // Create a new promotion item
+            createPromotionItem(rank, date);
+
+            // Clear the form fields
+            document.getElementById('rank').value = '';
+            document.getElementById('date').value = '';
+        } else {
+            alert('Please select a rank and date!');
+        }
+    });
+    
+    function saveRackPng() {
+        html2canvas(promotionContainer, { backgroundColor: null, scale: 4 }).then(canvas => {
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png');
+            link.download = 'promotions.png';
+            link.click();
+        });
+    }
+</script>
+
+</body>
+</html>
