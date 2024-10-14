@@ -7,17 +7,17 @@
     {
         "id": 2,
         "path": "02_officers_service_cap_insignia.svg",
-        "name": "Officers Service CAP Insignia"
+        "name": "Officer Service CAP Insignia"
     },
     {
         "id": 3,
-        "path": "model_rocketry_badge.svg",
-        "name": "Model Rocketry Badge"
+        "path": "nf_cyberpatriot_badge.svg",
+        "name": "CyberPatriot Badge"
     },
     {
         "id": 4,
-        "path": "khhs_badge.svg",
-        "name": "Kitty Hawk Honor Society Badge"
+        "path": "aef_badge.svg",
+        "name": "AEF Badge"
     },
     {
         "id": 5,
@@ -26,43 +26,43 @@
     },
     {
         "id": 6,
-        "path": "ground_school_badge.svg",
-        "name": "Ground School Badge"
+        "path": "khhs_badge.svg",
+        "name": "Kitty Hawk Honor Society Badge"
     },
     {
         "id": 7,
-        "path": "flight_solo_badge.svg",
-        "name": "Flight Solo Badge"
-    },
-    {
-        "id": 8,
-        "path": "flight_certifcate_badge.svg",
-        "name": "Flight Certifcate Badge"
-    },
-    {
-        "id": 9,
-        "path": "unmanned_aircraft_badge.svg",
-        "name": "Unmanned Aircraft Badge"
-    },
-    {
-        "id": 10,
-        "path": "marksmanship_shield_badge.svg",
-        "name": "Marksmanship Shield Badge"
-    },
-    {
-        "id": 11,
         "path": "apt_badge.svg",
         "name": "APT Badge"
     },
     {
+        "id": 8,
+        "path": "marksmanship_shield_badge.svg",
+        "name": "Marksmanship Shield Badge"
+    },
+    {
+        "id": 9,
+        "path": "ground_school_badge.svg",
+        "name": "Ground School Badge"
+    },
+    {
+        "id": 10,
+        "path": "flight_solo_badge.svg",
+        "name": "Flight Solo Badge"
+    },
+    {
+        "id": 11,
+        "path": "flight_certifcate_badge.svg",
+        "name": "Flight Certifcate Badge"
+    },
+    {
         "id": 12,
-        "path": "cyberpatriot_badge.svg",
-        "name": "CyberPatriot Badge"
+        "path": "unmanned_aircraft_badge.svg",
+        "name": "Unmanned Aircraft Badge"
     },
     {
         "id": 13,
-        "path": "aef_badge.svg",
-        "name": "AEF Badge"
+        "path": "model_rocketry_badge.svg",
+        "name": "Model Rocketry Badge"
     },
     {
         "id": 14,
